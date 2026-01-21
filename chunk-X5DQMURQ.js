@@ -1,0 +1,1 @@
+import{Ja as n,Ka as c,Xa as a,va as t}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var s=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-controlvalueaccessor"]],decls:2,vars:0,template:function(e,l){e&1&&(n(0,"h1"),a(1,"controlvalueaccessor"),c())},encapsulation:2})};export{s as ControlvalueaccessorComponent};

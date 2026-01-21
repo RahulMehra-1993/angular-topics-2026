@@ -1,0 +1,1 @@
+import{Ja as t,Ka as a,Xa as l,va as n}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var i=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=n({type:o,selectors:[["app-lazy-loading-modules"]],decls:2,vars:0,template:function(e,d){e&1&&(t(0,"h1"),l(1,"lazy-loading-modules"),a())},encapsulation:2})};export{i as LazyLoadingModulesComponent};

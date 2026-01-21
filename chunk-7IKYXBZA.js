@@ -1,0 +1,1 @@
+import{Ja as s,Ka as c,Xa as n,va as i}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var o=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=i({type:t,selectors:[["app-accessibility"]],decls:2,vars:0,template:function(e,p){e&1&&(s(0,"h1"),n(1,"accessibility"),c())},encapsulation:2})};export{o as AccessibilityComponent};

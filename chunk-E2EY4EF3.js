@@ -1,0 +1,1 @@
+import{Ja as n,Ka as o,Xa as r,va as t}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var i=class a{static \u0275fac=function(e){return new(e||a)};static \u0275cmp=t({type:a,selectors:[["app-angular-material"]],decls:2,vars:0,template:function(e,m){e&1&&(n(0,"h1"),r(1,"angular-material"),o())},encapsulation:2})};export{i as AngularMaterialComponent};

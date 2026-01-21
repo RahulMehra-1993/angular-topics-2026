@@ -1,0 +1,1 @@
+import{Ja as s,Ka as n,Xa as o,va as t}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var i=class e{static \u0275fac=function(a){return new(a||e)};static \u0275cmp=t({type:e,selectors:[["app-karma-basics"]],decls:2,vars:0,template:function(a,c){a&1&&(s(0,"h1"),o(1,"karma-basics"),n())},encapsulation:2})};export{i as KarmaBasicsComponent};

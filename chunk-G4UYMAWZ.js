@@ -1,0 +1,1 @@
+import{Ja as e,Ka as n,Xa as p,va as o}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var m=class i{static \u0275fac=function(t){return new(t||i)};static \u0275cmp=o({type:i,selectors:[["app-build-optimization"]],decls:2,vars:0,template:function(t,l){t&1&&(e(0,"h1"),p(1,"build-optimization"),n())},encapsulation:2})};export{m as BuildOptimizationComponent};

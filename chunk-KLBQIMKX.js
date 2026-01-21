@@ -1,0 +1,1 @@
+import{Ja as n,Ka as o,Xa as r,va as i}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var s=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=i({type:e,selectors:[["app-attribute-directives"]],decls:2,vars:0,template:function(t,a){t&1&&(n(0,"h1"),r(1,"attribute-directives"),o())},encapsulation:2})};export{s as AttributeDirectivesComponent};

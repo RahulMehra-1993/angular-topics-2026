@@ -1,0 +1,1 @@
+import{Ja as o,Ka as p,Xa as r,va as n}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var s=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-interceptors"]],decls:2,vars:0,template:function(e,i){e&1&&(o(0,"h1"),r(1,"interceptors"),p())},encapsulation:2})};export{s as InterceptorsComponent};

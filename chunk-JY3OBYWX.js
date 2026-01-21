@@ -1,0 +1,1 @@
+import{Ja as o,Ka as i,Xa as p,va as n}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var a=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=n({type:e,selectors:[["app-interpolation"]],decls:2,vars:0,template:function(t,l){t&1&&(o(0,"h1"),p(1,"interpolation"),i())},encapsulation:2})};export{a as InterpolationComponent};

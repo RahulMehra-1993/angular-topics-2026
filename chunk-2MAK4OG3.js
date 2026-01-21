@@ -1,0 +1,1 @@
+import{Ja as n,Ka as i,Xa as o,va as s}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var a=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=s({type:t,selectors:[["app-e2e-testing-basics"]],decls:2,vars:0,template:function(e,p){e&1&&(n(0,"h1"),o(1,"e2e-testing-basics"),i())},encapsulation:2})};export{a as E2eTestingBasicsComponent};

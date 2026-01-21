@@ -1,0 +1,1 @@
+import{Ja as o,Ka as m,Xa as p,va as n}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var r=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-template-driven-forms"]],decls:2,vars:0,template:function(e,a){e&1&&(o(0,"h1"),p(1,"template-driven-forms"),m())},encapsulation:2})};export{r as TemplateDrivenFormsComponent};

@@ -1,0 +1,1 @@
+import{Ja as i,Ka as o,Xa as a,va as e}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var p=class t{static \u0275fac=function(n){return new(n||t)};static \u0275cmp=e({type:t,selectors:[["app-internationalization"]],decls:2,vars:0,template:function(n,l){n&1&&(i(0,"h1"),a(1,"internationalization"),o())},encapsulation:2})};export{p as InternationalizationComponent};
