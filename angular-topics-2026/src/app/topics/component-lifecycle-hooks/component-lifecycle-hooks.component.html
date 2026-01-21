@@ -1,1 +1,81 @@
-<h1>component-lifecycle-hooks</h1>
+<div class="container">
+  <h1>Angular Component Lifecycle Hooks Demo</h1>
+
+  <!-- Controls -->
+  <section class="demo-controls">
+    <button type="button" (click)="changeInput()" class="change-btn">
+      Change Input Data
+    </button>
+
+    <p>
+      Current Input Data:
+      <strong>{{ inputData }}</strong>
+    </p>
+  </section>
+
+  <!-- ViewChild Demo -->
+  <section class="view-element" #viewElement>
+    <p>This element is used to demonstrate <code>ngAfterViewInit</code>.</p>
+  </section>
+
+  <!-- Content Projection -->
+  <section class="projected-content">
+    <h2>Projected Content (ng-content)</h2>
+    <ng-content></ng-content>
+  </section>
+
+  <!-- Lifecycle Timeline -->
+  <section class="hooks-info">
+    <h2>Lifecycle Hooks Execution Timeline</h2>
+
+    <div class="timeline">
+      <div
+        class="timeline-item"
+        *ngFor="let hook of hooks; trackBy: trackByHook; let isLast = last"
+      >
+        <div
+          class="timeline-marker"
+          [class.active]="hook.called"
+        ></div>
+
+        <div class="timeline-content">
+          <h3>{{ hook.name }}</h3>
+          <p>{{ hook.description }}</p>
+
+          <p class="usage">
+            Commonly Used:
+            <span
+              class="usage-status"
+              [class.common]="hook.commonlyUsed"
+            >
+              {{ hook.commonlyUsed ? 'Yes' : 'No' }}
+            </span>
+          </p>
+
+          <small *ngIf="hook.called" class="called-time">
+            Called at: {{ hook.calledAt | date: 'short' }}
+          </small>
+        </div>
+
+        <div class="timeline-line" *ngIf="!isLast"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logs -->
+  <section class="logs-section">
+    <h2>Lifecycle Hooks Execution Log</h2>
+
+    <ul class="logs-list">
+      <li
+        *ngFor="let log of logs; trackBy: trackByLog"
+        class="log-item"
+      >
+        {{ log.message }}
+        <span class="timestamp">
+          {{ log.timestamp | date: 'short' }}
+        </span>
+      </li>
+    </ul>
+  </section>
+</div>

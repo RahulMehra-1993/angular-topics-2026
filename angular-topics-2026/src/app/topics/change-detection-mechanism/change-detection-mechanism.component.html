@@ -1,1 +1,194 @@
-<h1>change-detection-mechanism</h1>
+<div class="container">
+  <!-- Header -->
+  <div class="header">
+    <h1>Angular Change Detection</h1>
+    <p>Learn how Angular detects and responds to changes</p>
+  </div>
+
+  <!-- Change Detection Counter -->
+  <div class="stats-section">
+    <h2>Change Detection Monitor</h2>
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-label">Cycles:</span>
+        <span class="stat-value">{{ changeDetectionCount }}</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Timer:</span>
+        <span class="stat-value">{{ timerValue }}</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Time:</span>
+        <span class="stat-value">{{ currentTime | date:'HH:mm:ss' }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Default Strategy -->
+  <div class="section">
+    <h2>Default Strategy</h2>
+    <p class="description">Checks all components on every async operation (events, timers, HTTP calls)</p>
+
+    <div class="demo-group">
+      <div class="demo">
+        <h3>Counter Demo</h3>
+        <div class="demo-content">
+          <p><strong>Counter:</strong> {{ counter }}</p>
+          <p><strong>Message:</strong> {{ message }}</p>
+          <button class="btn" (click)="incrementCounter()">Increment Counter</button>
+          <button class="btn" (click)="updateMessage()">Update Message</button>
+        </div>
+      </div>
+
+      <div class="demo">
+        <h3>Array Demo</h3>
+        <div class="demo-content">
+          <ul class="item-list">
+            <li *ngFor="let item of items; let i = index">
+              {{ item }}
+              <button class="btn-small" (click)="removeItem(i)">Remove</button>
+            </li>
+          </ul>
+          <button class="btn" (click)="addItem()">Add Item</button>
+        </div>
+      </div>
+
+      <div class="demo">
+        <h3>Async Demo</h3>
+        <div class="demo-content">
+          <p><strong>Result:</strong> {{ asyncResult }}</p>
+          <button class="btn" (click)="simulateAsyncOperation()">Start Async Operation</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OnPush Strategy -->
+  <div class="section onpush-section">
+    <h2>OnPush Strategy</h2>
+    <p class="description">Only checks when input properties change or manually triggered</p>
+
+    <div class="demo-group">
+      <div class="demo">
+        <h3>OnPush Counter</h3>
+        <div class="demo-content">
+          <p><strong>Counter:</strong> {{ onPushCounter }}</p>
+          <p><strong>Message:</strong> {{ onPushMessage }}</p>
+          <button class="btn" (click)="incrementOnPushCounter()">Increment (Won't Update)</button>
+          <button class="btn" (click)="updateOnPushMessage()">Update Message (Won't Update)</button>
+          <button class="btn" (click)="triggerManualDetection()">Force Update</button>
+        </div>
+      </div>
+
+      <div class="demo">
+        <h3>OnPush Array</h3>
+        <div class="demo-content">
+          <ul class="item-list">
+            <li *ngFor="let item of onPushItems">{{ item }}</li>
+          </ul>
+          <button class="btn" (click)="addOnPushItem()">Add Item (Won't Update)</button>
+          <button class="btn" (click)="markForCheck()">Mark for Check</button>
+        </div>
+      </div>
+
+      <div class="demo">
+        <h3>OnPush Component</h3>
+        <div class="demo-content">
+          <p><strong>Input:</strong> {{ onPushInputData }}</p>
+          <button class="btn" (click)="updateOnPushInput()">Update Input</button>
+          <app-onpush-demo [inputData]="onPushInputData"></app-onpush-demo>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zone.js Demo -->
+  <div class="section">
+    <h2>Zone.js & NgZone</h2>
+    <p class="description">Zone.js patches async operations to trigger change detection automatically</p>
+
+    <div class="demo-group">
+      <div class="demo">
+        <h3>Automatic Updates</h3>
+        <div class="demo-content">
+          <p>Current Time: <strong>{{ currentTime | date:'HH:mm:ss' }}</strong></p>
+          <p class="note">Updates every second automatically</p>
+        </div>
+      </div>
+
+      <div class="demo">
+        <h3>Outside Zone</h3>
+        <div class="demo-content">
+          <p><strong>Message:</strong> {{ message }}</p>
+          <button class="btn" (click)="runOutsideZone()">Run Outside Zone</button>
+          <p class="note">Check browser console</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Performance -->
+  <div class="section performance-section">
+    <h2>Performance</h2>
+    <p class="description">Understanding performance implications of change detection</p>
+
+    <div class="demo-group">
+      <div class="demo">
+        <h3>Heavy Operation</h3>
+        <div class="demo-content">
+          <button class="btn" (click)="heavyOperation()">Run Heavy Operation</button>
+          <p class="note">Check browser console for timing</p>
+        </div>
+      </div>
+
+      <div class="demo">
+        <h3>Strategy Comparison</h3>
+        <div class="comparison">
+          <div class="strategy-box">
+            <h4>Default Strategy</h4>
+            <ul>
+              <li>Checks all components</li>
+              <li>Triggers on every async operation</li>
+              <li>Simple but can be slow</li>
+            </ul>
+          </div>
+          <div class="strategy-box">
+            <h4>OnPush Strategy</h4>
+            <ul>
+              <li>Checks only when inputs change</li>
+              <li>Requires manual triggering</li>
+              <li>Fast but requires careful management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Best Practices -->
+  <div class="section best-practices">
+    <h2>Best Practices</h2>
+    <div class="practices-list">
+      <div class="practice">
+        <h4>Use OnPush Strategically</h4>
+        <p>Apply OnPush to components that don't need frequent updates</p>
+      </div>
+      <div class="practice">
+        <h4>Avoid Direct DOM Manipulation</h4>
+        <p>Let Angular handle DOM updates to prevent breaking change detection</p>
+      </div>
+      <div class="practice">
+        <h4>Use NgZone Wisely</h4>
+        <p>Run heavy computations outside Angular zone, then manually trigger change detection</p>
+      </div>
+      <div class="practice">
+        <h4>Immutable Data</h4>
+        <p>Use immutable operations for objects and arrays</p>
+      </div>
+      <div class="practice">
+        <h4>Manual Change Detection</h4>
+        <p>Use ChangeDetectorRef methods when working with OnPush components</p>
+      </div>
+    </div>
+  </div>
+</div>

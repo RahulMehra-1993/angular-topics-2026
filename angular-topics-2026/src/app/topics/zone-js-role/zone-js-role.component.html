@@ -1,1 +1,137 @@
-<h1>zone-js-role</h1>
+<div class="zone-js-container">
+  <header class="hero-section">
+    <h1 class="main-title">Understanding Zone.js in Angular</h1>
+    <p class="subtitle">Exploring the execution context library that powers Angular's change detection</p>
+  </header>
+
+  <section class="content-section">
+    <div class="card">
+      <h2 class="card-title">What is Zone.js?</h2>
+      <div class="card-content">
+        <p>
+          Zone.js is a JavaScript library that provides an execution context for asynchronous operations.
+          It was originally developed by Brian Ford and created to help with debugging and profiling
+          asynchronous JavaScript code. In Angular, Zone.js plays a crucial role in the framework's
+          change detection mechanism.
+        </p>
+        <div class="code-snippet">
+          <pre><code>// Zone.js creates a "zone" that tracks async operations
+const zone = Zone.current.fork(&#123;
+  name: 'myZone',
+  onInvoke: (delegate, current, target, callback) => &#123;
+    console.log('Function invoked in zone');
+    return delegate.invoke(target, callback);
+  &#125;
+&#125;);</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">What Was Its Use?</h2>
+      <div class="card-content">
+        <p>
+          Originally, Zone.js was designed to provide better debugging capabilities for asynchronous
+          JavaScript code. It allows developers to track the execution flow of asynchronous operations,
+          making it easier to understand complex async code patterns. Before Angular adopted it,
+          Zone.js was used in various JavaScript applications for:
+        </p>
+        <ul class="feature-list">
+          <li>Debugging asynchronous operations</li>
+          <li>Profiling long-running tasks</li>
+          <li>Managing execution contexts in complex applications</li>
+          <li>Tracking stack traces across async boundaries</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">How It Is Being Used in Angular</h2>
+      <div class="card-content">
+        <p>
+          In Angular, Zone.js is fundamental to the change detection system. Angular monkey-patches
+          all asynchronous APIs (setTimeout, Promise, XMLHttpRequest, etc.) to automatically trigger
+          change detection when these operations complete. This ensures that the UI stays in sync
+          with the application state.
+        </p>
+        <div class="usage-diagram">
+          <div class="diagram-step">
+            <h4>1. User Interaction</h4>
+            <p>Event occurs (click, input, etc.)</p>
+          </div>
+          <div class="arrow">→</div>
+          <div class="diagram-step">
+            <h4>2. Zone.js Detection</h4>
+            <p>Zone detects the async operation</p>
+          </div>
+          <div class="arrow">→</div>
+          <div class="diagram-step">
+            <h4>3. Change Detection</h4>
+            <p>Angular runs change detection</p>
+          </div>
+          <div class="arrow">→</div>
+          <div class="diagram-step">
+            <h4>4. UI Update</h4>
+            <p>View is updated automatically</p>
+          </div>
+        </div>
+        <div class="code-snippet">
+          <pre><code>// Angular's change detection is triggered automatically
+@Component(&#123;...&#125;)
+export class MyComponent &#123;
+  counter = 0;
+
+  increment() &#123;
+    // Zone.js ensures change detection runs after this
+    setTimeout(() => this.counter++, 1000);
+  &#125;
+&#125;</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Pros and Cons</h2>
+      <div class="card-content">
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>Pros</h3>
+            <ul>
+              <li><strong>Automatic Change Detection:</strong> No need to manually trigger updates</li>
+              <li><strong>Developer Experience:</strong> Simplifies async programming</li>
+              <li><strong>Performance:</strong> Efficient tracking of async operations</li>
+              <li><strong>Debugging:</strong> Better stack traces for async code</li>
+              <li><strong>Integration:</strong> Works seamlessly with RxJS and other libraries</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h3>Cons</h3>
+            <ul>
+              <li><strong>Bundle Size:</strong> Adds ~50KB to the application bundle</li>
+              <li><strong>Monkey Patching:</strong> Modifies global JavaScript APIs</li>
+              <li><strong>Learning Curve:</strong> Complex internal workings</li>
+              <li><strong>Performance Overhead:</strong> Slight performance cost for tracking</li>
+              <li><strong>Debugging Complexity:</strong> Can make debugging harder in some cases</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Future of Zone.js in Angular</h2>
+      <div class="card-content">
+        <p>
+          With the introduction of Signals in Angular, there's ongoing discussion about reducing
+          reliance on Zone.js. Angular 17+ provides options to run applications without Zone.js
+          when using the new Signals-based change detection. However, Zone.js remains the default
+          for backward compatibility and is still widely used in Angular applications.
+        </p>
+        <div class="note">
+          <strong>Note:</strong> Zone.js is still essential for most Angular applications and
+          understanding it remains crucial for Angular developers.
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
