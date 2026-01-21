@@ -1,0 +1,147 @@
+<div class="standalone-container">
+  <header class="hero-section">
+    <h1 class="hero-title">🚀 Standalone Components in Angular</h1>
+    <p class="hero-subtitle">Revolutionizing Angular Development with Self-Contained Components</p>
+  </header>
+
+  <section class="content-section">
+    <div class="card-grid">
+      <!-- What are Standalone Components -->
+      <div class="info-card">
+        <div class="card-header">
+          <h2 class="card-title">📋 What are Standalone Components?</h2>
+        </div>
+        <div class="card-content">
+          <p>Standalone components are Angular components that manage their own dependencies and don't require NgModules. They can be imported directly and used anywhere in your application.</p>
+          <div class="code-example">
+            <pre><code>@Component(&lbrace;
+  selector: 'app-example',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
+  template: `...`
+&rbrace;)
+export class ExampleComponent &lbrace;&rbrace;</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advantages -->
+      <div class="info-card advantage-card">
+        <div class="card-header">
+          <h2 class="card-title">✅ Advantages</h2>
+        </div>
+        <div class="card-content">
+          <ul class="advantage-list">
+            <li><strong>Simplified Architecture:</strong> No need for NgModules, reducing boilerplate</li>
+            <li><strong>Better Tree-Shaking:</strong> Unused components are automatically removed</li>
+            <li><strong>Faster Builds:</strong> Smaller bundle sizes due to improved tree-shaking</li>
+            <li><strong>Improved Developer Experience:</strong> Easier to create and maintain components</li>
+            <li><strong>Lazy Loading:</strong> Components can be lazy-loaded individually</li>
+            <li><strong>Self-Contained:</strong> All dependencies are explicitly declared</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Performance Impact -->
+      <div class="info-card performance-card">
+        <div class="card-header">
+          <h2 class="card-title">⚡ Performance Impact</h2>
+        </div>
+        <div class="card-content">
+          <div class="performance-metrics">
+            <div class="metric">
+              <div class="metric-value">30-50%</div>
+              <div class="metric-label">Smaller Bundle Size</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">20-40%</div>
+              <div class="metric-label">Faster Build Times</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">15-25%</div>
+              <div class="metric-label">Improved Runtime Performance</div>
+            </div>
+          </div>
+          <p class="performance-explanation">
+            Standalone components enable better tree-shaking, resulting in smaller bundles and faster load times.
+            The explicit import declarations help bundlers eliminate unused code more effectively.
+          </p>
+        </div>
+      </div>
+
+      <!-- Comparison with Module-based -->
+      <div class="info-card comparison-card">
+        <div class="card-header">
+          <h2 class="card-title">🔄 Before vs After</h2>
+        </div>
+        <div class="card-content">
+          <div class="comparison-table">
+            <div class="comparison-row">
+              <div class="comparison-cell header">Aspect</div>
+              <div class="comparison-cell header">Module-based</div>
+              <div class="comparison-cell header">Standalone</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comparison-cell">Boilerplate</div>
+              <div class="comparison-cell">High (NgModule required)</div>
+              <div class="comparison-cell advantage">Low (Direct import)</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comparison-cell">Tree-shaking</div>
+              <div class="comparison-cell">Limited</div>
+              <div class="comparison-cell advantage">Excellent</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comparison-cell">Lazy Loading</div>
+              <div class="comparison-cell">Module-level</div>
+              <div class="comparison-cell advantage">Component-level</div>
+            </div>
+            <div class="comparison-row">
+              <div class="comparison-cell">Dependencies</div>
+              <div class="comparison-cell">Implicit</div>
+              <div class="comparison-cell advantage">Explicit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disadvantages -->
+      <div class="info-card disadvantage-card">
+        <div class="card-header">
+          <h2 class="card-title">⚠️ Potential Disadvantages</h2>
+        </div>
+        <div class="card-content">
+          <ul class="disadvantage-list">
+            <li><strong>Learning Curve:</strong> New paradigm for Angular developers</li>
+            <li><strong>Migration Effort:</strong> Converting existing module-based apps requires work</li>
+            <li><strong>Import Management:</strong> Must explicitly import all dependencies</li>
+            <li><strong>Tooling Maturity:</strong> Some tools may not fully support standalone components yet</li>
+          </ul>
+          <p class="note">
+            <em>Note:</em> Most disadvantages are transitional and diminish as the ecosystem matures.
+          </p>
+        </div>
+      </div>
+
+      <!-- Best Practices -->
+      <div class="info-card best-practices-card">
+        <div class="card-header">
+          <h2 class="card-title">🎯 Best Practices</h2>
+        </div>
+        <div class="card-content">
+          <ul class="practice-list">
+            <li>Use standalone components for new features and gradually migrate existing ones</li>
+            <li>Keep imports minimal and focused on what the component actually needs</li>
+            <li>Leverage lazy loading for route components to improve initial load performance</li>
+            <li>Use the Angular CLI's standalone component schematics for consistency</li>
+            <li>Test components in isolation since they manage their own dependencies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <p>Angular Standalone Components - The Future of Angular Development</p>
+  </footer>
+</div>

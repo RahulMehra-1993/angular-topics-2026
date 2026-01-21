@@ -1,0 +1,194 @@
+import { Routes } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AngularArchitectureComponent } from './topics/angular-architecture/angular-architecture.component';
+import { AngularCliCommandsComponent } from './topics/angular-cli-commands/angular-cli-commands.component';
+import { ModuleSystemComponent } from './topics/module-system/module-system.component';
+import { StandaloneComponentsComponent } from './topics/standalone-components/standalone-components.component';
+import { ComponentLifecycleHooksComponent } from './topics/component-lifecycle-hooks/component-lifecycle-hooks.component';
+import { ChangeDetectionMechanismComponent } from './topics/change-detection-mechanism/change-detection-mechanism.component';
+import { ChangeDetectionStrategiesComponent } from './topics/change-detection-strategies/change-detection-strategies.component';
+import { ZoneJsRoleComponent } from './topics/zone-js-role/zone-js-role.component';
+import { IvyCompilerComponent } from './topics/ivy-compiler/ivy-compiler.component';
+import { AotVsJitCompilationComponent } from './topics/aot-vs-jit-compilation/aot-vs-jit-compilation.component';
+import { TemplateSyntaxComponent } from './topics/template-syntax/template-syntax.component';
+import { InterpolationComponent } from './topics/interpolation/interpolation.component';
+import { PropertyBindingComponent } from './topics/property-binding/property-binding.component';
+import { EventBindingComponent } from './topics/event-binding/event-binding.component';
+import { TwoWayBindingComponent } from './topics/two-way-binding/two-way-binding.component';
+import { StructuralDirectivesComponent } from './topics/structural-directives/structural-directives.component';
+import { AttributeDirectivesComponent } from './topics/attribute-directives/attribute-directives.component';
+import { CustomDirectivesComponent } from './topics/custom-directives/custom-directives.component';
+import { PipesComponent } from './topics/pipes/pipes.component';
+import { PureVsImpurePipesComponent } from './topics/pure-vs-impure-pipes/pure-vs-impure-pipes.component';
+import { CustomPipesComponent } from './topics/custom-pipes/custom-pipes.component';
+import { ViewencapsulationComponent } from './topics/viewencapsulation/viewencapsulation.component';
+import { ContentProjectionComponent } from './topics/content-projection/content-projection.component';
+import { DependencyInjectionSystemComponent } from './topics/dependency-injection-system/dependency-injection-system.component';
+import { ProviderScopesComponent } from './topics/provider-scopes/provider-scopes.component';
+import { HierarchicalInjectorsComponent } from './topics/hierarchical-injectors/hierarchical-injectors.component';
+import { ServicesComponent } from './topics/services/services.component';
+import { HttpclientComponent } from './topics/httpclient/httpclient.component';
+import { InterceptorsComponent } from './topics/interceptors/interceptors.component';
+import { ErrorHandlingHttpclientComponent } from './topics/error-handling-httpclient/error-handling-httpclient.component';
+import { RxjsFundamentalsComponent } from './topics/rxjs-fundamentals/rxjs-fundamentals.component';
+import { ObservablesVsPromisesComponent } from './topics/observables-vs-promises/observables-vs-promises.component';
+import { SubjectsComponent } from './topics/subjects/subjects.component';
+import { BehaviorsubjectComponent } from './topics/behaviorsubject/behaviorsubject.component';
+import { ReplaysubjectComponent } from './topics/replaysubject/replaysubject.component';
+import { AsyncPipeComponent } from './topics/async-pipe/async-pipe.component';
+import { RxjsOperatorsComponent } from './topics/rxjs-operators/rxjs-operators.component';
+import { SubscriptionManagementComponent } from './topics/subscription-management/subscription-management.component';
+import { MemoryLeaksAngularComponent } from './topics/memory-leaks-angular/memory-leaks-angular.component';
+import { ReactiveFormsComponent } from './topics/reactive-forms/reactive-forms.component';
+import { TemplateDrivenFormsComponent } from './topics/template-driven-forms/template-driven-forms.component';
+import { FormValidationComponent } from './topics/form-validation/form-validation.component';
+import { CustomValidatorsComponent } from './topics/custom-validators/custom-validators.component';
+import { FormarrayComponent } from './topics/formarray/formarray.component';
+import { DynamicFormsComponent } from './topics/dynamic-forms/dynamic-forms.component';
+import { ControlvalueaccessorComponent } from './topics/controlvalueaccessor/controlvalueaccessor.component';
+import { RoutingModuleComponent } from './topics/routing-module/routing-module.component';
+import { LazyLoadingModulesComponent } from './topics/lazy-loading-modules/lazy-loading-modules.component';
+import { StandaloneRouteConfigurationComponent } from './topics/standalone-route-configuration/standalone-route-configuration.component';
+import { RouteGuardsComponent } from './topics/route-guards/route-guards.component';
+import { ResolversComponent } from './topics/resolvers/resolvers.component';
+import { PreloadingStrategiesComponent } from './topics/preloading-strategies/preloading-strategies.component';
+import { NestedRoutingComponent } from './topics/nested-routing/nested-routing.component';
+import { RouteReuseStrategyComponent } from './topics/route-reuse-strategy/route-reuse-strategy.component';
+import { StateManagementConceptsComponent } from './topics/state-management-concepts/state-management-concepts.component';
+import { NgrxStoreComponent } from './topics/ngrx-store/ngrx-store.component';
+import { NgrxEffectsComponent } from './topics/ngrx-effects/ngrx-effects.component';
+import { NgrxEntityComponent } from './topics/ngrx-entity/ngrx-entity.component';
+import { NgrxSelectorsComponent } from './topics/ngrx-selectors/ngrx-selectors.component';
+import { ReduxPatternAngularComponent } from './topics/redux-pattern-angular/redux-pattern-angular.component';
+import { SignalsComponent } from './topics/signals/signals.component';
+import { ComputedSignalsComponent } from './topics/computed-signals/computed-signals.component';
+import { SignalVsRxjsComponent } from './topics/signal-vs-rxjs/signal-vs-rxjs.component';
+import { ComponentCommunicationComponent } from './topics/component-communication/component-communication.component';
+import { InputOutputComponent } from './topics/input-output/input-output.component';
+import { ViewchildContentchildComponent } from './topics/viewchild-contentchild/viewchild-contentchild.component';
+import { HostlistenerHostbindingComponent } from './topics/hostlistener-hostbinding/hostlistener-hostbinding.component';
+import { ChangeDetectionOptimizationComponent } from './topics/change-detection-optimization/change-detection-optimization.component';
+import { TrackbyNgforComponent } from './topics/trackby-ngfor/trackby-ngfor.component';
+import { VirtualScrollingComponent } from './topics/virtual-scrolling/virtual-scrolling.component';
+import { AngularCdkComponent } from './topics/angular-cdk/angular-cdk.component';
+import { PerformanceOptimizationTechniquesComponent } from './topics/performance-optimization-techniques/performance-optimization-techniques.component';
+import { InternationalizationComponent } from './topics/internationalization/internationalization.component';
+import { SecurityComponent } from './topics/security/security.component';
+import { DomsanitizerComponent } from './topics/domsanitizer/domsanitizer.component';
+import { EnvironmentConfigurationComponent } from './topics/environment-configuration/environment-configuration.component';
+import { BuildOptimizationComponent } from './topics/build-optimization/build-optimization.component';
+import { DifferentialLoadingComponent } from './topics/differential-loading/differential-loading.component';
+import { TestingJasmineComponent } from './topics/testing-jasmine/testing-jasmine.component';
+import { KarmaBasicsComponent } from './topics/karma-basics/karma-basics.component';
+import { UnitTestingComponentsComponent } from './topics/unit-testing-components/unit-testing-components.component';
+import { ServiceTestingComponent } from './topics/service-testing/service-testing.component';
+import { MockingHttpclientComponent } from './topics/mocking-httpclient/mocking-httpclient.component';
+import { E2eTestingBasicsComponent } from './topics/e2e-testing-basics/e2e-testing-basics.component';
+import { AccessibilityComponent } from './topics/accessibility/accessibility.component';
+import { AngularMaterialComponent } from './topics/angular-material/angular-material.component';
+import { CustomThemingComponent } from './topics/custom-theming/custom-theming.component';
+import { MonorepoBasicsComponent } from './topics/monorepo-basics/monorepo-basics.component';
+import { MicroFrontendBasicsComponent } from './topics/micro-frontend-basics/micro-frontend-basics.component';
+import { FolderStructureBestPracticesComponent } from './topics/folder-structure-best-practices/folder-structure-best-practices.component';
+import { FeatureBasedArchitectureComponent } from './topics/feature-based-architecture/feature-based-architecture.component';
+import { SsrAngularUniversalComponent } from './topics/ssr-angular-universal/ssr-angular-universal.component';
+
+export const routes: Routes = [
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'angular-architecture', component: AngularArchitectureComponent },
+    { path: 'angular-cli-commands', component: AngularCliCommandsComponent },
+    { path: 'module-system', component: ModuleSystemComponent },
+    { path: 'standalone-components', component: StandaloneComponentsComponent },
+    { path: 'component-lifecycle-hooks', component: ComponentLifecycleHooksComponent },
+    { path: 'change-detection-mechanism', component: ChangeDetectionMechanismComponent },
+    { path: 'change-detection-strategies', component: ChangeDetectionStrategiesComponent },
+    { path: 'zone-js-role', component: ZoneJsRoleComponent },
+    { path: 'ivy-compiler', component: IvyCompilerComponent },
+    { path: 'aot-vs-jit-compilation', component: AotVsJitCompilationComponent },
+    { path: 'template-syntax', component: TemplateSyntaxComponent },
+    { path: 'interpolation', component: InterpolationComponent },
+    { path: 'property-binding', component: PropertyBindingComponent },
+    { path: 'event-binding', component: EventBindingComponent },
+    { path: 'two-way-binding', component: TwoWayBindingComponent },
+    { path: 'structural-directives', component: StructuralDirectivesComponent },
+    { path: 'attribute-directives', component: AttributeDirectivesComponent },
+    { path: 'custom-directives', component: CustomDirectivesComponent },
+    { path: 'pipes', component: PipesComponent },
+    { path: 'pure-vs-impure-pipes', component: PureVsImpurePipesComponent },
+    { path: 'custom-pipes', component: CustomPipesComponent },
+    { path: 'viewencapsulation', component: ViewencapsulationComponent },
+    { path: 'content-projection', component: ContentProjectionComponent },
+    { path: 'dependency-injection-system', component: DependencyInjectionSystemComponent },
+    { path: 'provider-scopes', component: ProviderScopesComponent },
+    { path: 'hierarchical-injectors', component: HierarchicalInjectorsComponent },
+    { path: 'services', component: ServicesComponent },
+    { path: 'httpclient', component: HttpclientComponent },
+    { path: 'interceptors', component: InterceptorsComponent },
+    { path: 'error-handling-httpclient', component: ErrorHandlingHttpclientComponent },
+    { path: 'rxjs-fundamentals', component: RxjsFundamentalsComponent },
+    { path: 'observables-vs-promises', component: ObservablesVsPromisesComponent },
+    { path: 'subjects', component: SubjectsComponent },
+    { path: 'behaviorsubject', component: BehaviorsubjectComponent },
+    { path: 'replaysubject', component: ReplaysubjectComponent },
+    { path: 'async-pipe', component: AsyncPipeComponent },
+    { path: 'rxjs-operators', component: RxjsOperatorsComponent },
+    { path: 'subscription-management', component: SubscriptionManagementComponent },
+    { path: 'memory-leaks-angular', component: MemoryLeaksAngularComponent },
+    { path: 'reactive-forms', component: ReactiveFormsComponent },
+    { path: 'template-driven-forms', component: TemplateDrivenFormsComponent },
+    { path: 'form-validation', component: FormValidationComponent },
+    { path: 'custom-validators', component: CustomValidatorsComponent },
+    { path: 'formarray', component: FormarrayComponent },
+    { path: 'dynamic-forms', component: DynamicFormsComponent },
+    { path: 'controlvalueaccessor', component: ControlvalueaccessorComponent },
+    { path: 'routing-module', component: RoutingModuleComponent },
+    { path: 'lazy-loading-modules', component: LazyLoadingModulesComponent },
+    { path: 'standalone-route-configuration', component: StandaloneRouteConfigurationComponent },
+    { path: 'route-guards', component: RouteGuardsComponent },
+    { path: 'resolvers', component: ResolversComponent },
+    { path: 'preloading-strategies', component: PreloadingStrategiesComponent },
+    { path: 'nested-routing', component: NestedRoutingComponent },
+    { path: 'route-reuse-strategy', component: RouteReuseStrategyComponent },
+    { path: 'state-management-concepts', component: StateManagementConceptsComponent },
+    { path: 'ngrx-store', component: NgrxStoreComponent },
+    { path: 'ngrx-effects', component: NgrxEffectsComponent },
+    { path: 'ngrx-entity', component: NgrxEntityComponent },
+    { path: 'ngrx-selectors', component: NgrxSelectorsComponent },
+    { path: 'redux-pattern-angular', component: ReduxPatternAngularComponent },
+    { path: 'signals', component: SignalsComponent },
+    { path: 'computed-signals', component: ComputedSignalsComponent },
+    { path: 'signal-vs-rxjs', component: SignalVsRxjsComponent },
+    { path: 'component-communication', component: ComponentCommunicationComponent },
+    { path: 'input-output', component: InputOutputComponent },
+    { path: 'viewchild-contentchild', component: ViewchildContentchildComponent },
+    { path: 'hostlistener-hostbinding', component: HostlistenerHostbindingComponent },
+    { path: 'change-detection-optimization', component: ChangeDetectionOptimizationComponent },
+    { path: 'trackby-ngfor', component: TrackbyNgforComponent },
+    { path: 'virtual-scrolling', component: VirtualScrollingComponent },
+    { path: 'angular-cdk', component: AngularCdkComponent },
+    { path: 'performance-optimization-techniques', component: PerformanceOptimizationTechniquesComponent },
+    { path: 'internationalization', component: InternationalizationComponent },
+    { path: 'security', component: SecurityComponent },
+    { path: 'domsanitizer', component: DomsanitizerComponent },
+    { path: 'environment-configuration', component: EnvironmentConfigurationComponent },
+    { path: 'build-optimization', component: BuildOptimizationComponent },
+    { path: 'differential-loading', component: DifferentialLoadingComponent },
+    { path: 'testing-jasmine', component: TestingJasmineComponent },
+    { path: 'karma-basics', component: KarmaBasicsComponent },
+    { path: 'unit-testing-components', component: UnitTestingComponentsComponent },
+    { path: 'service-testing', component: ServiceTestingComponent },
+    { path: 'mocking-httpclient', component: MockingHttpclientComponent },
+    { path: 'e2e-testing-basics', component: E2eTestingBasicsComponent },
+    { path: 'accessibility', component: AccessibilityComponent },
+    { path: 'angular-material', component: AngularMaterialComponent },
+    { path: 'custom-theming', component: CustomThemingComponent },
+    { path: 'monorepo-basics', component: MonorepoBasicsComponent },
+    { path: 'micro-frontend-basics', component: MicroFrontendBasicsComponent },
+    { path: 'folder-structure-best-practices', component: FolderStructureBestPracticesComponent },
+    { path: 'feature-based-architecture', component: FeatureBasedArchitectureComponent },
+    { path: 'ssr-angular-universal', component: SsrAngularUniversalComponent },
+];
+
+
+
