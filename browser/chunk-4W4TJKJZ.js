@@ -1,0 +1,1 @@
+import{Ba as e,Ra as a,Sa as s,ib as n}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var i=class o{static \u0275fac=function(t){return new(t||o)};static \u0275cmp=e({type:o,selectors:[["app-custom-validators"]],decls:2,vars:0,template:function(t,c){t&1&&(a(0,"h1"),n(1,"custom-validators"),s())},encapsulation:2})};export{i as CustomValidatorsComponent};

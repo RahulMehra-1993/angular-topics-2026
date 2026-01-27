@@ -1,1 +1,0 @@
-import{Ja as i,Ka as o,Xa as p,va as t}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var m=class e{static \u0275fac=function(n){return new(n||e)};static \u0275cmp=t({type:e,selectors:[["app-event-binding"]],decls:2,vars:0,template:function(n,s){n&1&&(i(0,"h1"),p(1,"event-binding"),o())},encapsulation:2})};export{m as EventBindingComponent};

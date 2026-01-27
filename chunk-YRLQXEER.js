@@ -1,1 +1,0 @@
-import{Ja as o,Ka as i,Xa as m,va as n}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var a=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-domsanitizer"]],decls:2,vars:0,template:function(e,p){e&1&&(o(0,"h1"),m(1,"domsanitizer"),i())},encapsulation:2})};export{a as DomsanitizerComponent};

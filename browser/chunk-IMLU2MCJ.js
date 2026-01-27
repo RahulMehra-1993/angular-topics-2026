@@ -1,0 +1,1 @@
+import{Ba as n,Ra as o,Sa as s,ib as c}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-subjects"]],decls:2,vars:0,template:function(e,m){e&1&&(o(0,"h1"),c(1,"subjects"),s())},encapsulation:2})};export{p as SubjectsComponent};

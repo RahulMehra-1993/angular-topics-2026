@@ -1,0 +1,1 @@
+import{Ba as s,Ra as t,Sa as o,ib as i}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var a=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=s({type:n,selectors:[["app-signal-vs-rxjs"]],decls:2,vars:0,template:function(e,l){e&1&&(t(0,"h1"),i(1,"signal-vs-rxjs"),o())},encapsulation:2})};export{a as SignalVsRxjsComponent};

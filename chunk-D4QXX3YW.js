@@ -1,1 +1,0 @@
-import{Ja as s,Ka as i,Xa as n,va as t}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var o=class p{static \u0275fac=function(e){return new(e||p)};static \u0275cmp=t({type:p,selectors:[["app-pure-vs-impure-pipes"]],decls:2,vars:0,template:function(e,m){e&1&&(s(0,"h1"),n(1,"pure-vs-impure-pipes"),i())},encapsulation:2})};export{o as PureVsImpurePipesComponent};

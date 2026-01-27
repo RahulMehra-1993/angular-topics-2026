@@ -1,0 +1,1 @@
+import{Ba as t,Ra as i,Sa as o,ib as a}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var f=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=t({type:n,selectors:[["app-differential-loading"]],decls:2,vars:0,template:function(e,d){e&1&&(i(0,"h1"),a(1,"differential-loading"),o())},encapsulation:2})};export{f as DifferentialLoadingComponent};

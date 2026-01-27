@@ -1,1 +1,0 @@
-import{Ja as p,Ka as o,Xa as u,va as n}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var i=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=n({type:e,selectors:[["app-input-output"]],decls:2,vars:0,template:function(t,a){t&1&&(p(0,"h1"),u(1,"input-output"),o())},encapsulation:2})};export{i as InputOutputComponent};

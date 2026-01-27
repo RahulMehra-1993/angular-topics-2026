@@ -1,0 +1,1 @@
+import{Ba as e,Ra as n,Sa as i,ib as a}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var m=class t{static \u0275fac=function(o){return new(o||t)};static \u0275cmp=e({type:t,selectors:[["app-form-validation"]],decls:2,vars:0,template:function(o,r){o&1&&(n(0,"h1"),a(1,"form-validation"),i())},encapsulation:2})};export{m as FormValidationComponent};

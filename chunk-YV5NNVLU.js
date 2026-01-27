@@ -1,1 +1,0 @@
-import{Ja as n,Ka as i,Xa as m,va as o}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var a=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-reactive-forms"]],decls:2,vars:0,template:function(e,r){e&1&&(n(0,"h1"),m(1,"reactive-forms"),i())},encapsulation:2})};export{a as ReactiveFormsComponent};

@@ -1,0 +1,1 @@
+import{Ba as t,Ra as o,Sa as i,ib as a}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var m=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=t({type:n,selectors:[["app-subscription-management"]],decls:2,vars:0,template:function(e,p){e&1&&(o(0,"h1"),a(1,"subscription-management"),i())},encapsulation:2})};export{m as SubscriptionManagementComponent};

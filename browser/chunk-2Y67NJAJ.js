@@ -1,0 +1,1 @@
+import{Ba as t,Ra as a,Sa as s,ib as o}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var m=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=t({type:n,selectors:[["app-rxjs-fundamentals"]],decls:2,vars:0,template:function(e,i){e&1&&(a(0,"h1"),o(1,"rxjs-fundamentals"),s())},encapsulation:2})};export{m as RxjsFundamentalsComponent};

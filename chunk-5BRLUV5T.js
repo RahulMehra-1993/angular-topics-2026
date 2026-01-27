@@ -1,1 +1,0 @@
-import{Ja as t,Ka as i,Xa as s,va as o}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var c=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=o({type:n,selectors:[["app-micro-frontend-basics"]],decls:2,vars:0,template:function(e,a){e&1&&(t(0,"h1"),s(1,"micro-frontend-basics"),i())},encapsulation:2})};export{c as MicroFrontendBasicsComponent};

@@ -1,1 +1,0 @@
-import{Ja as o,Ka as i,Xa as a,va as e}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var p=class t{static \u0275fac=function(n){return new(n||t)};static \u0275cmp=e({type:t,selectors:[["app-two-way-binding"]],decls:2,vars:0,template:function(n,s){n&1&&(o(0,"h1"),a(1,"two-way-binding"),i())},encapsulation:2})};export{p as TwoWayBindingComponent};

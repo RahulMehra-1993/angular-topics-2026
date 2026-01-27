@@ -1,0 +1,1 @@
+import{Ba as n,Ra as o,Sa as i,ib as l}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var r=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=n({type:e,selectors:[["app-virtual-scrolling"]],decls:2,vars:0,template:function(t,c){t&1&&(o(0,"h1"),l(1,"virtual-scrolling"),i())},encapsulation:2})};export{r as VirtualScrollingComponent};

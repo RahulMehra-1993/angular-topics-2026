@@ -1,1 +1,0 @@
-import{Ja as e,Ka as n,Xa as a,va as i}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var p=class o{static \u0275fac=function(t){return new(t||o)};static \u0275cmp=i({type:o,selectors:[["app-aot-vs-jit-compilation"]],decls:2,vars:0,template:function(t,s){t&1&&(e(0,"h1"),a(1,"aot-vs-jit-compilation"),n())},encapsulation:2})};export{p as AotVsJitCompilationComponent};

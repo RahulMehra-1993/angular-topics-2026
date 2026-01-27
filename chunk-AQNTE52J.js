@@ -1,1 +1,0 @@
-import{Ja as i,Ka as n,Xa as o,va as c}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var r=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=c({type:t,selectors:[["app-hierarchical-injectors"]],decls:2,vars:0,template:function(e,s){e&1&&(i(0,"h1"),o(1,"hierarchical-injectors"),n())},encapsulation:2})};export{r as HierarchicalInjectorsComponent};

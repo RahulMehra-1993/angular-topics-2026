@@ -1,0 +1,1 @@
+import{Ba as n,Ra as a,Sa as r,ib as o}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-redux-pattern-angular"]],decls:2,vars:0,template:function(e,i){e&1&&(a(0,"h1"),o(1,"redux-pattern-angular"),r())},encapsulation:2})};export{p as ReduxPatternAngularComponent};

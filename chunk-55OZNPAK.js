@@ -1,1 +1,0 @@
-import{Ja as i,Ka as n,Xa as p,va as t}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var m=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-ivy-compiler"]],decls:2,vars:0,template:function(e,r){e&1&&(i(0,"h1"),p(1,"ivy-compiler"),n())},encapsulation:2})};export{m as IvyCompilerComponent};

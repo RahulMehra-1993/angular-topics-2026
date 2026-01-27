@@ -1,0 +1,1 @@
+import{Ba as o,Ra as s,Sa as r,ib as n}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-rxjs-operators"]],decls:2,vars:0,template:function(e,i){e&1&&(s(0,"h1"),n(1,"rxjs-operators"),r())},encapsulation:2})};export{p as RxjsOperatorsComponent};

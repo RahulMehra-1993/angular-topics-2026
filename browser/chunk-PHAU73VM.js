@@ -1,0 +1,1 @@
+import{Ba as o,Ra as t,Sa as m,ib as i}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var a=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=o({type:n,selectors:[["app-dynamic-forms"]],decls:2,vars:0,template:function(e,c){e&1&&(t(0,"h1"),i(1,"dynamic-forms"),m())},encapsulation:2})};export{a as DynamicFormsComponent};

@@ -1,0 +1,1 @@
+import{Ba as t,Ra as p,Sa as n,ib as s}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var r=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=t({type:o,selectors:[["app-provider-scopes"]],decls:2,vars:0,template:function(e,c){e&1&&(p(0,"h1"),s(1,"provider-scopes"),n())},encapsulation:2})};export{r as ProviderScopesComponent};

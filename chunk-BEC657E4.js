@@ -1,1 +1,0 @@
-import{Ja as e,Ka as m,Xa as i,va as t}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var c=class o{static \u0275fac=function(n){return new(n||o)};static \u0275cmp=t({type:o,selectors:[["app-component-communication"]],decls:2,vars:0,template:function(n,a){n&1&&(e(0,"h1"),i(1,"component-communication"),m())},encapsulation:2})};export{c as ComponentCommunicationComponent};

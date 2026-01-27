@@ -1,1 +1,0 @@
-import{Ja as p,Ka as o,Xa as i,va as t}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var s=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=t({type:n,selectors:[["app-async-pipe"]],decls:2,vars:0,template:function(e,a){e&1&&(p(0,"h1"),i(1,"async-pipe"),o())},encapsulation:2})};export{s as AsyncPipeComponent};

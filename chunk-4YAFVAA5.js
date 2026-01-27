@@ -1,1 +1,0 @@
-import{Ja as t,Ka as s,Xa as p,va as n}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var i=class e{static \u0275fac=function(o){return new(o||e)};static \u0275cmp=n({type:e,selectors:[["app-monorepo-basics"]],decls:2,vars:0,template:function(o,c){o&1&&(t(0,"h1"),p(1,"monorepo-basics"),s())},encapsulation:2})};export{i as MonorepoBasicsComponent};

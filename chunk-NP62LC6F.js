@@ -1,1 +1,0 @@
-import{Ja as a,Ka as o,Xa as p,va as n}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var m=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=n({type:e,selectors:[["app-template-syntax"]],decls:2,vars:0,template:function(t,i){t&1&&(a(0,"h1"),p(1,"template-syntax"),o())},encapsulation:2})};export{m as TemplateSyntaxComponent};

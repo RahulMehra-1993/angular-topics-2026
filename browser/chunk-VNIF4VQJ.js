@@ -1,0 +1,1 @@
+import{Ba as o,Ra as t,Sa as n,ib as r}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var i=class s{static \u0275fac=function(e){return new(e||s)};static \u0275cmp=o({type:s,selectors:[["app-observables-vs-promises"]],decls:2,vars:0,template:function(e,a){e&1&&(t(0,"h1"),r(1,"observables-vs-promises"),n())},encapsulation:2})};export{i as ObservablesVsPromisesComponent};

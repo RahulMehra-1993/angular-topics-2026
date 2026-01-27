@@ -1,0 +1,1 @@
+import{Ba as n,Ra as o,Sa as i,ib as c}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var p=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=n({type:e,selectors:[["app-mocking-httpclient"]],decls:2,vars:0,template:function(t,l){t&1&&(o(0,"h1"),c(1,"mocking-httpclient"),i())},encapsulation:2})};export{p as MockingHttpclientComponent};

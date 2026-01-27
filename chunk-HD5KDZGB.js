@@ -1,1 +1,0 @@
-import{Ja as i,Ka as s,Xa as n,va as o}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var c=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-custom-directives"]],decls:2,vars:0,template:function(e,p){e&1&&(i(0,"h1"),n(1,"custom-directives"),s())},encapsulation:2})};export{c as CustomDirectivesComponent};

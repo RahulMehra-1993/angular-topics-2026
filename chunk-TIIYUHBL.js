@@ -1,1 +1,0 @@
-import{Ja as i,Ka as c,Xa as n,va as r}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var o=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=r({type:e,selectors:[["app-structural-directives"]],decls:2,vars:0,template:function(t,a){t&1&&(i(0,"h1"),n(1,"structural-directives"),c())},encapsulation:2})};export{o as StructuralDirectivesComponent};

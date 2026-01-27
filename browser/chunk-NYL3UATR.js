@@ -1,0 +1,1 @@
+import{Ba as o,Ra as n,Sa as r,ib as a}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var c=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=o({type:e,selectors:[["app-trackby-ngfor"]],decls:2,vars:0,template:function(t,i){t&1&&(n(0,"h1"),a(1,"trackby-ngfor"),r())},encapsulation:2})};export{c as TrackbyNgforComponent};

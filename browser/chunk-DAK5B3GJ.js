@@ -1,0 +1,1 @@
+import{Ba as n,Ra as o,Sa as m,ib as i}from"./chunk-76UNUFEL.js";import"./chunk-6PMQQMX7.js";var s=class e{static \u0275fac=function(t){return new(t||e)};static \u0275cmp=n({type:e,selectors:[["app-custom-theming"]],decls:2,vars:0,template:function(t,p){t&1&&(o(0,"h1"),i(1,"custom-theming"),m())},encapsulation:2})};export{s as CustomThemingComponent};

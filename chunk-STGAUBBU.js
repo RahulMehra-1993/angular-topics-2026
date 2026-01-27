@@ -1,1 +1,0 @@
-import{Ja as i,Ka as o,Xa as s,va as n}from"./chunk-WZPJ2RN4.js";import"./chunk-6PMQQMX7.js";var c=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-service-testing"]],decls:2,vars:0,template:function(e,r){e&1&&(i(0,"h1"),s(1,"service-testing"),o())},encapsulation:2})};export{c as ServiceTestingComponent};
