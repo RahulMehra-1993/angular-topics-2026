@@ -1,1 +1,57 @@
-<h1>content-projection</h1>
+<div class="container">
+  <!-- Header -->
+  <div class="hero-section">
+    <h1 class="hero-title">📦 Content Projection in Angular</h1>
+    <p class="hero-subtitle">
+      Reusing components while allowing flexible content insertion
+    </p>
+  </div>
+
+  <!-- Explanation -->
+  <section class="explanation-card">
+    <h2 class="section-title">🔍 What is Content Projection?</h2>
+    <p class="description">
+      Content Projection is a powerful Angular feature that allows you to
+      pass HTML content from a parent component into a child component.
+      Instead of hardcoding content inside the child, Angular lets the parent
+      decide what should be displayed.
+    </p>
+
+    <p class="description">
+      Angular uses the <code>&lt;ng-content&gt;</code> directive to project
+      external content into predefined placeholders inside a component.
+    </p>
+  </section>
+
+  <!-- Benefits -->
+  <section class="explanation-card">
+    <h2 class="section-title">🎯 Why Use Content Projection?</h2>
+    <ul class="benefits-list">
+      <li>✅ Creates highly reusable components</li>
+      <li>✅ Separates layout from content</li>
+      <li>✅ Avoids duplicate UI logic</li>
+      <li>✅ Makes components flexible and customizable</li>
+      <li>✅ Commonly used in modals, cards, tabs, and layouts</li>
+    </ul>
+  </section>
+
+  <!-- How it works -->
+  <section class="explanation-card">
+    <h2 class="section-title">⚙️ How Content Projection Works</h2>
+    <ol class="steps-list">
+      <li>Parent component passes HTML inside the child selector</li>
+      <li>Child component defines where content should appear using <code>&lt;ng-content&gt;</code></li>
+      <li>Angular automatically inserts the parent content at runtime</li>
+    </ol>
+  </section>
+
+  <!-- Demo -->
+  <section class="demo-card">
+    <h2 class="section-title">🧪 Demo: Content Projection</h2>
+
+    <app-child>
+      <p>This content is projected into the child component!</p>
+      <span>This is also projected into the child</span>
+    </app-child>
+  </section>
+</div>

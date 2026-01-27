@@ -1,1 +1,72 @@
-/* Custom styles for content-projection component */
+.container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+.hero-section {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white;
+  border-radius: 14px;
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Cards */
+.explanation-card,
+.demo-card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+
+/* Text */
+.description {
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+code {
+  background: #eef2ff;
+  color: #4338ca;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* Lists */
+.benefits-list li,
+.steps-list li {
+  margin: 10px 0;
+  color: #374151;
+}
+
+/* Demo */
+.demo-card app-child {
+  display: block;
+  margin-top: 15px;
+}

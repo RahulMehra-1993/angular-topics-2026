@@ -1,1 +1,82 @@
-<h1>pure-vs-impure-pipes</h1>
+<div class="pure-impure-container">
+  <h1>Pure and Impure pipe</h1>
+
+  <!-- Section 1: Explain what a pipe is -->
+  <div class="card explanation">
+    <h2>What is a Pipe?</h2>
+    <p>
+      A <strong>pipe</strong> in Angular is used to <em>transform data in templates</em>. It can
+      modify display format, filter data, or change text without touching the component.
+    </p>
+    <p>Example of built-in pipes:</p>
+    <ul>
+      <li>{{ 12345.6789 | number: '1.2-2' }} → Number pipe</li>
+      <li>{{ 'angular pipes demo' | titlecase }} → Text transformation</li>
+      <li>{{ 0.256 | percent: '1.0-1' }} → Percent pipe</li>
+      <li>{{ today | date: 'fullDate' }} → Date pipe</li>
+    </ul>
+  </div>
+
+  <!-- Section 2: Pure Pipe -->
+  <div class="card">
+    <h2>Pure Pipe (updates only when input reference changes)</h2>
+    <p>
+      Type in search to filter → Pure pipe updates. Click
+      <strong>Add Fruit (Mutate Array)</strong> → Pure pipe will <em>NOT</em> update. Click
+      <strong>Add Fruit (New Reference)</strong> → Pure pipe will update.
+    </p>
+    <hr>
+    <h5>Open your console and check on clicking both the buttons. You will see the difference in execution.</h5>
+
+    <input type="text" placeholder="Search fruit" [(ngModel)]="searchText" />
+
+    <button (click)="addFruit()">Add Fruit (Mutate Array)</button>
+    <button (click)="replaceFruitList()">Add Fruit (New Reference)</button>
+
+    <ul>
+      <li *ngFor="let fruit of fruits | pureFilter: searchText">
+        {{ fruit }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Section 3: Impure Pipe -->
+  <div class="card impure">
+    <h2>Impure Pipe (updates on every change detection)</h2>
+    <p>
+      Any change, mutation, or typing in search triggers this pipe. Use sparingly for large lists to
+      avoid performance issues.
+    </p>
+
+    <ul>
+      <li *ngFor="let fruit of fruits | impureFilter: searchText">
+        {{ fruit }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Section 4: Async Pipe -->
+  <div class="card explanation">
+    <h2>Async Pipe</h2>
+    <p>
+      The <strong>async pipe</strong> subscribes to an <em>Observable</em> or <em>Promise</em> in the template,
+      automatically renders the latest value, and unsubscribes when the component is destroyed.
+    </p>
+    <p>
+      This is very useful for fetching data from APIs or reactive streams without manually subscribing in
+      the component.
+    </p>
+
+    <h3>Example with Observable:</h3>
+    <ul>
+      <li>Value updates every 1 second from an observable:</li>
+      <li><strong>{{ randomNumber$ | async }}</strong></li>
+    </ul>
+
+    <h3>Example with Promise:</h3>
+    <ul>
+      <li>Value resolves after 3 seconds:</li>
+      <li><strong>{{ delayedMessage$ | async }}</strong></li>
+    </ul>
+  </div>
+</div>

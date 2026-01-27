@@ -1,1 +1,65 @@
-/* Custom styles for services component */
+/* Custom styles for services component */.container {
+  margin: auto;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f5f7fb;
+}
+
+/* Header */
+.hero-section {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* Cards */
+.explanation-card,
+.summary-card {
+  background: #ffffff;
+  padding: 26px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Titles */
+.section-title {
+  font-size: 1.4rem;
+  color: #1f2937;
+  margin-bottom: 14px;
+}
+
+/* Text */
+.description,
+.summary-text {
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Lists */
+.benefits-list li,
+.usecase-list li,
+.steps-list li {
+  margin: 10px 0;
+  color: #374151;
+  font-size: 1rem;
+}
+
+/* Highlight */
+strong {
+  color: #15803d;
+}

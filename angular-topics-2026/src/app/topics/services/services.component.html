@@ -1,1 +1,65 @@
-<h1>services</h1>
+<div class="container">
+  <!-- Header -->
+  <div class="hero-section">
+    <h1 class="hero-title">Angular Services</h1>
+    <p class="hero-subtitle">
+      Centralizing business logic and data sharing across components
+    </p>
+  </div>
+
+  <!-- What is a Service -->
+  <section class="explanation-card">
+    <h2 class="section-title">What is a Service in Angular?</h2>
+    <p class="description">
+      An Angular Service is a reusable class that is used to organize and share
+      business logic, data, or common functionality across multiple components.
+      Services help keep components lightweight and focused on UI logic only.
+    </p>
+
+    <p class="description">
+      Services are typically used to handle API calls, data manipulation,
+      logging, authentication, and other non-UI related operations.
+    </p>
+  </section>
+
+  <!-- Why Services -->
+  <section class="explanation-card">
+    <h2 class="section-title">Why Do We Use Services?</h2>
+    <ul class="benefits-list">
+      <li>✅ Promotes separation of concerns</li>
+      <li>✅ Avoids code duplication across components</li>
+      <li>✅ Enables data sharing between components</li>
+      <li>✅ Makes application more maintainable and testable</li>
+      <li>✅ Supports clean and scalable architecture</li>
+    </ul>
+  </section>
+
+  <!-- Dependency Injection -->
+  <section class="explanation-card">
+    <h2 class="section-title">How Services Work in Angular</h2>
+    <p class="description">
+      Angular uses a concept called <strong>Dependency Injection (DI)</strong>
+      to provide services to components. Instead of creating a service manually,
+      Angular creates and injects it wherever required.
+    </p>
+
+    <ol class="steps-list">
+      <li>Create a service using Angular CLI</li>
+      <li>Register the service with Angular’s injector</li>
+      <li>Inject the service into components using the constructor</li>
+      <li>Consume service methods inside the component</li>
+    </ol>
+  </section>
+
+  <!-- Where Used -->
+  <section class="explanation-card">
+    <h2 class="section-title">📌 Common Use Cases of Services</h2>
+    <ul class="usecase-list">
+      <li>🌐 API communication using HttpClient</li>
+      <li>📦 Shared data between components</li>
+      <li>🔐 Authentication and authorization</li>
+      <li>🧮 Business logic and calculations</li>
+      <li>📊 State management logic</li>
+    </ul>
+  </section>
+</div>

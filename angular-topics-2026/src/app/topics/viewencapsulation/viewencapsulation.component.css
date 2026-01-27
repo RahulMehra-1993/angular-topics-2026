@@ -1,1 +1,126 @@
-/* Custom styles for viewencapsulation component */
+/* Custom styles for viewencapsulation component *//* Container styling, same as previous theme */
+.pure-impure-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header styling */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Card styling */
+.card {
+  border: 2px solid #ddd;
+  padding: 16px 20px;
+  margin: 20px auto;
+  /* max-width: 650px; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background-color: #fefefe;
+}
+
+/* Impure card (just for differentiation) */
+.card.impure {
+  border-color: #e67e22;
+  background-color: #fff3e0;
+}
+
+/* Explanation card (green) */
+.card.explanation {
+  border-color: #2ecc71;
+  background-color: #e8f5e9;
+}
+
+/* Section titles */
+.card h2 {
+  color: #34495e;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  border-left: 5px solid #3498db;
+  padding-left: 15px;
+}
+
+/* Code examples */
+.code-examples {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  margin: 15px 0;
+  border: 1px solid #34495e;
+  overflow-x: auto;
+}
+
+/* Highlighted box demo */
+.highlight-box {
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.highlight-box.active {
+  background-color: #e74c3c; /* toggled color */
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Paragraph styling inside cards */
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/* Strong / emphasis */
+strong {
+  color: #dd0031;
+}
+
+em {
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pure-impure-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .code-examples {
+    font-size: 0.85rem;
+  }
+}

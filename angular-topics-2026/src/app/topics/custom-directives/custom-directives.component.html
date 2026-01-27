@@ -1,1 +1,231 @@
-<h1>custom-directives</h1>
+<div class="container">
+  <div class="hero-section">
+    <h1 class="hero-title">🎯 Custom Directives in Angular</h1>
+    <p class="hero-subtitle">Master the art of creating reusable directive logic</p>
+  </div>
+
+  <div class="content-section">
+    <!-- What are Directives? -->
+    <section class="explanation-card">
+      <h2 class="section-title">🔍 What are Directives?</h2>
+      <div class="explanation-content">
+        <p class="lead-text">
+          Directives are classes that add additional behavior to elements in your Angular
+          applications. They are one of the core building blocks of Angular and allow you to extend
+          HTML with custom functionality.
+        </p>
+
+        <div class="directive-types">
+          <div class="type-card">
+            <h3 class="type-title">📦 Components</h3>
+            <p>
+              The most common type of directive. Components have templates and are the building
+              blocks of UI.
+            </p>
+            <code class="code-snippet">@Component(&#123; selector: 'app-my-component' &#125;)</code>
+          </div>
+
+          <div class="type-card">
+            <h3 class="type-title">🏗️ Structural Directives</h3>
+            <p>
+              Change the DOM layout by adding/removing elements. Identified by the asterisk (*)
+              prefix.
+            </p>
+            <code class="code-snippet">*ngIf, *ngFor, *ngSwitch</code>
+          </div>
+
+          <div class="type-card">
+            <h3 class="type-title">🎨 Attribute Directives</h3>
+            <p>Change the appearance or behavior of an element. Don't change the DOM structure.</p>
+            <code class="code-snippet">ngClass, ngStyle, ngModel</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creating Custom Directives -->
+   <section class="creation-section">
+  <h2 class="section-title">⚡ Creating Custom Directives</h2>
+
+  <div class="steps-container">
+    <div class="step-card">
+      <div class="step-number">1</div>
+      <h3>Generate the Directive</h3>
+
+      <pre class="code-block">
+ng generate directive highlight
+      </pre>
+    </div>
+
+    <div class="step-card">
+      <div class="step-number">2</div>
+      <h3>Import Directive</h3>
+
+      <pre class="code-block">
+import &#123; HighlightDirective &#125; from './highlight.directive';
+      </pre>
+    </div>
+
+    <div class="step-card">
+      <div class="step-number">3</div>
+      <h3>Add to Declarations</h3>
+
+      <pre class="code-block">
+@NgModule(&#123; declarations: [HighlightDirective] &#125;)
+      </pre>
+    </div>
+
+    <div class="step-card">
+      <div class="step-number">4</div>
+      <h3>Use in Template</h3>
+
+      <pre class="code-block">
+&lt;p appHighlight&gt;Highlighted text&lt;/p&gt;
+      </pre>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Live Examples -->
+    <section class="examples-section">
+      <h2 class="section-title">🚀 Live Examples</h2>
+
+      <div class="example-grid">
+        <!-- Highlight Directive Example -->
+        <div class="example-card">
+          <h3 class="example-title">✨ Highlight Directive</h3>
+          <p class="example-description">
+            An attribute directive that changes background color on hover
+          </p>
+
+          <div class="demo-area">
+            <p appHighlight class="demo-text">Hover over this text to see the highlight effect!</p>
+            <p appHighlight="yellow" class="demo-text">Custom yellow highlight on hover</p>
+            <p appHighlight="lightblue" class="demo-text">Light blue highlight effect</p>
+          </div>
+
+          <div class="code-preview">
+            <h4>Usage:</h4>
+            <code>&lt;p appHighlight&gt;Default highlight&lt;/p&gt;</code>
+            <code>&lt;p appHighlight="yellow"&gt;Custom color&lt;/p&gt;</code>
+          </div>
+        </div>
+
+        <!-- Unless Directive Example -->
+        <div class="example-card">
+          <h3 class="example-title">🔄 Unless Directive</h3>
+          <p class="example-description">
+            A structural directive that shows content when condition is false
+          </p>
+
+          <div class="demo-area">
+            <div class="toggle-controls">
+              <button (click)="showContent = !showContent" class="toggle-btn">
+                {{ toggleButtonText }} Content
+              </button>
+            </div>
+
+            <div *appUnless="!showContent" class="conditional-content">
+              <p>🎉 This content appears when the condition is false!</p>
+              <p>The *appUnless directive is the opposite of *ngIf</p>
+            </div>
+
+            <div *appUnless="showContent" class="conditional-content">
+              <p>😴 This content appears when showContent is false</p>
+            </div>
+          </div>
+
+          <div class="code-preview">
+            <h4>Usage:</h4>
+            <code>&lt;div *appUnless="condition"&gt;Content&lt;/div&gt;</code>
+          </div>
+        </div>
+
+        <!-- Rainbow Directive Example -->
+        <div class="example-card">
+          <h3 class="example-title">🌈 Rainbow Directive</h3>
+          <p class="example-description">Cycles through colors on click</p>
+
+          <div class="demo-area">
+            <button appRainbow class="rainbow-btn">Click me for rainbow colors!</button>
+            <p appRainbow class="rainbow-text">Click this text too!</p>
+          </div>
+
+          <div class="code-preview">
+            <h4>Usage:</h4>
+            <code>&lt;button appRainbow&gt;Rainbow button&lt;/button&gt;</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Directive Lifecycle -->
+    <section class="lifecycle-section">
+      <h2 class="section-title">🔄 Directive Lifecycle</h2>
+
+      <div class="lifecycle-diagram">
+        <div class="lifecycle-step">
+          <div class="step-icon">🏗️</div>
+          <h4>Constructor</h4>
+          <p>Dependency injection happens here</p>
+        </div>
+
+        <div class="lifecycle-step">
+          <div class="step-icon">🎯</div>
+          <h4>ngOnInit</h4>
+          <p>Initialization logic, input properties are set</p>
+        </div>
+
+        <div class="lifecycle-step">
+          <div class="step-icon">👀</div>
+          <h4>ngOnChanges</h4>
+          <p>Called when input properties change</p>
+        </div>
+
+        <div class="lifecycle-step">
+          <div class="step-icon">🗑️</div>
+          <h4>ngOnDestroy</h4>
+          <p>Cleanup logic, unsubscribe from observables</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Practices -->
+    <section class="best-practices-section">
+      <h2 class="section-title">💡 Best Practices</h2>
+
+      <div class="practices-grid">
+        <div class="practice-card">
+          <h3>🎯 Single Responsibility</h3>
+          <p>Each directive should have one clear purpose</p>
+        </div>
+
+        <div class="practice-card">
+          <h3>🔧 Host Binding</h3>
+          <p>Use @HostBinding for dynamic styling</p>
+        </div>
+
+        <div class="practice-card">
+          <h3>👂 Host Listener</h3>
+          <p>Use @HostListener for event handling</p>
+        </div>
+
+        <div class="practice-card">
+          <h3>🧹 Cleanup</h3>
+          <p>Always implement ngOnDestroy for cleanup</p>
+        </div>
+
+        <div class="practice-card">
+          <h3>📝 Documentation</h3>
+          <p>Document your directive's purpose and usage</p>
+        </div>
+
+        <div class="practice-card">
+          <h3>🧪 Testing</h3>
+          <p>Write unit tests for your directives</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

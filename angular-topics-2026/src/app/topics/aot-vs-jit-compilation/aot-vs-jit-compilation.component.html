@@ -1,1 +1,141 @@
-<h1>aot-vs-jit-compilation</h1>
+<div class="aot-jit-container">
+  <div class="header">
+    <h1>AOT vs JIT Compilation in Angular</h1>
+  </div>
+
+  <section class="history">
+    <h2>📜 History</h2>
+    <p>
+      The evolution of compilation strategies in Angular reflects the framework's journey toward
+      performance and scalability. In AngularJS (Angular 1.x), the framework relied exclusively on
+      <strong>Just-In-Time (JIT) compilation</strong>, where templates were compiled in the browser
+      at runtime. This approach was simple but had performance drawbacks for larger applications.
+    </p>
+    <p>
+      With Angular 2 (released in 2016), the team introduced
+      <strong>Ahead-of-Time (AOT) compilation</strong> as an experimental feature. AOT allowed
+      templates to be compiled during the build process, resulting in faster application startup and
+      smaller bundle sizes. Over time, AOT became the recommended approach and was integrated deeply
+      into the Angular CLI.
+    </p>
+    <p>
+      By Angular 9 (2019), AOT became the default compilation mode for production builds, while JIT
+      remained available for development. This shift marked a significant milestone in Angular's
+      performance optimization journey.
+    </p>
+  </section>
+
+  <section class="explanations">
+    <h2>🔍 Understanding JIT and AOT</h2>
+
+    <div class="compilation-type">
+      <h3>⚡ Just-In-Time (JIT) Compilation</h3>
+      <p>
+        JIT compilation occurs <em>at runtime</em> in the user's browser. When an Angular
+        application loads, the framework downloads the TypeScript code and compiles the templates
+        on-the-fly before rendering.
+      </p>
+      <ul>
+        <li>
+          <strong>Process:</strong> Browser downloads TS files → Angular compiler compiles templates
+          → Application renders
+        </li>
+        <li>
+          <strong>Advantages:</strong> Faster development builds, easier debugging, supports dynamic
+          component creation
+        </li>
+        <li>
+          <strong>Trade-offs:</strong> Larger initial bundle, slower startup, compilation overhead
+          in browser
+        </li>
+      </ul>
+    </div>
+
+    <div class="compilation-type">
+      <h3>🏗️ Ahead-of-Time (AOT) Compilation</h3>
+      <p>
+        AOT compilation happens <em>during the build process</em> on the development machine. The
+        Angular compiler analyzes and compiles templates before the application is deployed,
+        generating optimized JavaScript code.
+      </p>
+      <ul>
+        <li>
+          <strong>Process:</strong> Build time → Angular compiler processes templates → Generates
+          optimized JS → Deploy
+        </li>
+        <li>
+          <strong>Advantages:</strong> Smaller bundles, faster startup, better security,
+          compile-time error detection
+        </li>
+        <li><strong>Trade-offs:</strong> Longer build times, more complex development setup</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="differences">
+    <h2>⚖️ Key Differences</h2>
+    <div class="comparison-table">
+      <div class="comparison-row">
+        <div class="aspect">Timing</div>
+        <div class="jit">Runtime (browser)</div>
+        <div class="aot">Build time (development machine)</div>
+      </div>
+      <div class="comparison-row">
+        <div class="aspect">Bundle Size</div>
+        <div class="jit">Larger (includes compiler)</div>
+        <div class="aot">Smaller (compiler not needed)</div>
+      </div>
+      <div class="comparison-row">
+        <div class="aspect">Startup Performance</div>
+        <div class="jit">Slower (compilation + rendering)</div>
+        <div class="aot">Faster (pre-compiled)</div>
+      </div>
+      <div class="comparison-row">
+        <div class="aspect">Error Detection</div>
+        <div class="jit">Runtime errors</div>
+        <div class="aot">Build-time errors</div>
+      </div>
+      <div class="comparison-row">
+        <div class="aspect">Security</div>
+        <div class="jit">Templates visible in source</div>
+        <div class="aot">Templates compiled to JS</div>
+      </div>
+      <div class="comparison-row">
+        <div class="aspect">Development Experience</div>
+        <div class="jit">Faster rebuilds, easier debugging</div>
+        <div class="aot">Slower builds, better optimization</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="current-usage">
+    <h2>🚀 Current Usage in Angular</h2>
+    <p>
+      As of Angular 17 (2024), <strong>AOT compilation is the default and only mode</strong> for
+      both development and production builds. The Angular CLI automatically uses AOT when you run
+      commands like:
+    </p>
+    <div class="code-examples">
+      <code>ng build</code> - Production build with AOT<br />
+      <code>ng serve</code> - Development server with AOT<br />
+      <code>ng build --configuration development</code> - Development build with AOT
+    </div>
+    <p>
+      While JIT was completely removed in Angular 13, the framework still provides excellent
+      development experiences through features like:
+    </p>
+    <ul>
+      <li>
+        <strong>Hot Module Replacement (HMR):</strong> Fast incremental rebuilds during development
+      </li>
+      <li>
+        <strong>Build optimizations:</strong> Tree-shaking, minification, and dead code elimination
+      </li>
+      <li><strong>Development mode:</strong> Enhanced debugging and error reporting</li>
+    </ul>
+    <p>
+      The shift to AOT-only has significantly improved Angular's performance, security, and
+      developer experience, making it one of the most efficient frontend frameworks available.
+    </p>
+  </section>
+</div>

@@ -1,1 +1,301 @@
 /* Custom styles for custom-directives component */
+
+.container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ================= HERO ================= */
+.hero-section {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* ================= CONTENT ================= */
+.content-section {
+  display: grid;
+  gap: 40px;
+}
+
+.explanation-card,
+.creation-section,
+.examples-section,
+.lifecycle-section,
+.best-practices-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e5e9;
+}
+
+/* ================= TITLES ================= */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.explanation-content .lead-text {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ================= DIRECTIVE TYPES ================= */
+.directive-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.type-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.type-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.type-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* ================= INLINE CODE ================= */
+.code-snippet {
+  background: #f1f3f5;
+  color: #2c3e50;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 0.9rem;
+  border: 1px solid #e1e5e9;
+}
+
+/* ================= STEPS ================= */
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.step-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: #667eea;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 15px;
+  font-size: 1.2rem;
+}
+
+/* ================= 🔥 CODE BLOCK FIX (THEME SAME) ================= */
+.code-block,
+.code-preview {
+  background: #2d3748;        /* SAME COLOR */
+  color: #e2e8f0;
+
+  padding: 14px 16px;
+  border-radius: 6px;
+
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+
+  border: 1px solid #1a202c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Fix ugly full-width look on big screens */
+@media (min-width: 1024px) {
+  .code-block,
+  .code-preview {
+    /* max-width: 85%; */
+    margin: 16px auto;
+  }
+}
+
+.code-preview h4 {
+  margin-bottom: 10px;
+  color: #63b3ed;
+  font-size: 0.85rem;
+}
+
+/* ================= EXAMPLES ================= */
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.example-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 25px;
+  border: 1px solid #e1e5e9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.example-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= DEMO ================= */
+.demo-area {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #e1e5e9;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ================= BUTTONS ================= */
+.toggle-btn,
+.rainbow-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-btn:hover,
+.rainbow-btn:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+}
+
+/* ================= LIFECYCLE ================= */
+.lifecycle-diagram {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.lifecycle-step {
+  text-align: center;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #e1e5e9;
+  transition: all 0.3s ease;
+}
+
+.lifecycle-step:hover {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+}
+
+/* ================= PRACTICES ================= */
+.practices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.practice-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #48bb78;
+  transition: transform 0.2s ease;
+}
+
+.practice-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .directive-types,
+  .steps-container,
+  .example-grid,
+  .lifecycle-diagram,
+  .practices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explanation-card,
+  .creation-section,
+  .examples-section,
+  .lifecycle-section,
+  .best-practices-section {
+    padding: 20px;
+  }
+}

@@ -1,1 +1,37 @@
-<h1>dependency-injection-system</h1>
+<div class="container">
+  <h1 class="heading">dependency-injection-system</h1>
+  <section class="explanation">
+    <h2>🔍 What is Dependency Injection in Angular?</h2>
+    <p>
+      Dependency Injection (DI) is a design pattern used in Angular to manage how components and
+      services acquire their dependencies. Instead of creating dependencies directly, Angular's DI
+      system provides them when needed, promoting loose coupling and easier testing.
+    </p>
+
+    <h2>⚙️ How Does Angular's Dependency Injection Work?</h2>
+    <ul>
+      <li>
+        <strong>Providers:</strong> Services are registered with Angular's injector using providers.
+        This can be done at the root level or within specific modules or components.
+      </li>
+      <li>
+        <strong>Injectors:</strong> Angular creates a hierarchical injector system. Each component
+        has its own injector that can inherit services from parent injectors.
+      </li>
+      <li>
+        <strong>Injection Tokens:</strong> Unique identifiers used to register and retrieve
+        dependencies, allowing for more complex scenarios like multi-providers.
+      </li>
+      <li>
+        <strong>Constructor Injection:</strong> Dependencies are typically injected via the
+        constructor of a class, allowing Angular to resolve and provide the required services
+        automatically.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sample : below is the injectable service data recieved</h2>
+    <p>{{ injectableData }}</p>
+  </section>
+</div>

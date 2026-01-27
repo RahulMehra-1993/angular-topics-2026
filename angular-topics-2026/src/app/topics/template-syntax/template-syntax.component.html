@@ -1,1 +1,297 @@
-<h1>template-syntax</h1>
+<div class="template-syntax-container">
+  <div class="header">
+    <h1>Angular Template Syntax</h1>
+    <p>Master the powerful syntax for building dynamic Angular templates</p>
+  </div>
+
+  <section class="introduction">
+    <h2>🎯 Introduction</h2>
+    <p>
+      Angular template syntax is a powerful set of tools that allows you to create dynamic,
+      interactive user interfaces. It combines HTML with Angular-specific syntax to bind data,
+      handle events, and control the DOM structure.
+    </p>
+  </section>
+
+  <section class="syntax-section">
+    <h2>📝 1. Interpolation</h2>
+    <p>
+      Interpolation displays component property values in the template. It's the simplest form
+      of data binding, using double curly braces.
+    </p>
+
+    <div class="example">
+      <h3>Example:</h3>
+      <div class="code-example">
+        <pre><code>&lt;p&gt;Welcome to &lbrace;&lbrace; title &rbrace;&rbrace;&lt;/p&gt;
+&lt;p&gt;Current time: &lbrace;&lbrace; currentTime | date:'short' &rbrace;&rbrace;&lt;/p&gt;
+&lt;p&gt;User: &lbrace;&lbrace; user?.name &rbrace;&rbrace;, Age: &lbrace;&lbrace; user?.age &rbrace;&rbrace;&lt;/p&gt;</code></pre>
+      </div>
+      <div class="output">
+        <p><strong>Output:</strong></p>
+        <p>Welcome to {{ title }}</p>
+        <p>Current time: {{ currentTime | date:'short' }}</p>
+        <p>User: {{ user?.name }}, Age: {{ user?.age }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="syntax-section">
+    <h2>🔗 2. Property Binding ([property])</h2>
+    <p>
+      Property binding sets element properties to component property values. It uses square
+      brackets and allows one-way data flow from component to template.
+    </p>
+
+    <div class="example">
+      <h3>Example:</h3>
+      <div class="code-example">
+        <pre><code>&lt;img [src]="imageUrl" [alt]="title" /&gt;
+&lt;button [disabled]="isDisabled" [innerText]="buttonText"&gt;&lt;/button&gt;
+&lt;input [value]="name" /&gt;</code></pre>
+      </div>
+      <div class="output">
+        <p><strong>Output:</strong></p>
+        <img [src]="imageUrl" [alt]="title" style="max-width: 100px;" />
+        <br>
+        <button [disabled]="isDisabled" [innerText]="buttonText"></button>
+        <br>
+        <input [value]="name" readonly style="margin-top: 10px;" />
+      </div>
+    </div>
+  </section>
+
+  <section class="syntax-section">
+    <h2>🎧 3. Event Binding ((event))</h2>
+    <p>
+      Event binding listens for DOM events and calls component methods. It uses parentheses
+      and allows one-way data flow from template to component.
+    </p>
+
+    <div class="example">
+      <h3>Example:</h3>
+      <div class="code-example">
+        <pre><code>&lt;button (click)="onButtonClick()"&gt;Click me&lt;/button&gt;
+&lt;p&gt;Click count: &lbrace;&lbrace; clickCount &rbrace;&rbrace;&lt;/p&gt;
+
+&lt;input (input)="onInputChange($event)" placeholder="Type something" /&gt;
+&lt;p&gt;Input value: &lbrace;&lbrace; inputValue &rbrace;&rbrace;&lt;/p&gt;</code></pre>
+      </div>
+      <div class="output">
+        <p><strong>Output:</strong></p>
+        <button (click)="onButtonClick()">Click me</button>
+        <p>Click count: {{ clickCount }}</p>
+
+        <input (input)="onInputChange($event)" placeholder="Type something" />
+        <p>Input value: {{ inputValue }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="syntax-section">
+    <h2>🔄 4. Two-Way Data Binding ([(ngModel)])</h2>
+    <p>
+      Two-way binding combines property and event binding. It uses banana-in-a-box syntax
+      and synchronizes data between component and template.
+    </p>
+
+    <div class="example">
+      <h3>Example:</h3>
+      <div class="code-example">
+        <pre><code>&lt;input [(ngModel)]="name" placeholder="Enter your name" /&gt;
+&lt;p&gt;Hello, &lbrace;&lbrace; name &rbrace;&rbrace;!&lt;/p&gt;</code></pre>
+      </div>
+      <div class="output">
+        <p><strong>Output:</strong></p>
+        <input [(ngModel)]="name" placeholder="Enter your name" />
+        <p>Hello, {{ name }}!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="syntax-section">
+    <h2>🏗️ 5. Structural Directives</h2>
+    <p>
+      Structural directives change the DOM layout by adding, removing, or manipulating elements.
+      They start with an asterisk (*) which is syntactic sugar for &lt;ng-template&gt;.
+    </p>
+
+    <div class="sub-section">
+      <h3>*ngIf</h3>
+      <div class="code-example">
+        <pre><code>&lt;div *ngIf="showDetails"&gt;
+  &lt;p&gt;These details are visible!&lt;/p&gt;
+&lt;/div&gt;
+&lt;button (click)="toggleDetails()"&gt;Toggle Details&lt;/button&gt;</code></pre>
+      </div>
+      <div class="output">
+        <div *ngIf="showDetails">
+          <p>These details are visible!</p>
+        </div>
+        <button (click)="toggleDetails()">Toggle Details</button>
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <h3>*ngFor</h3>
+      <div class="code-example">
+        <pre><code>&lt;ul&gt;
+  &lt;li *ngFor="let item of items; trackBy: trackByIndex"&gt;
+    item
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      </div>
+      <div class="output">
+        <ul>
+          <li *ngFor="let item of items; trackBy: trackByIndex">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-section">
+      <h3>*ngSwitch</h3>
+      <div class="code-example">
+        <pre><code>&lt;div [ngSwitch]="selectedItem"&gt;
+  &lt;p *ngSwitchCase="'Item 1'"&gt;First item selected&lt;/p&gt;
+  &lt;p *ngSwitchCase="'Item 2'"&gt;Second item selected&lt;/p&gt;
+  &lt;p *ngSwitchDefault&gt;Other item selected&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;select [(ngModel)]="selectedItem"&gt;
+  &lt;option *ngFor="let item of items" [value]="item"&gt;item&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+      </div>
+      <div class="output">
+        <div [ngSwitch]="selectedItem">
+          <p *ngSwitchCase="'Item 1'">First item selected</p>
+          <p *ngSwitchCase="'Item 2'">Second item selected</p>
+          <p *ngSwitchDefault>Other item selected</p>
+        </div>
+
+        <select [(ngModel)]="selectedItem">
+          <option *ngFor="let item of items" [value]="item">{{ item }}</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section class="syntax-section">
+    <h2>🎨 6. Attribute Directives</h2>
+    <p>
+      Attribute directives change the appearance or behavior of DOM elements. They use square
+      brackets and can be built-in or custom.
+    </p>
+
+    <div class="example">
+      <h3>Example:</h3>
+      <div class="code-example">
+        <pre><code>&lt;p [class.active]="isActive"&gt;This text can be active&lt;/p&gt;
+&lt;p [style.color]="isActive ? 'green' : 'red'"&gt;Color changes&lt;/p&gt;
+&lt;p [attr.title]="title"&gt;Hover for title&lt;/p&gt;</code></pre>
+      </div>
+      <div class="output">
+        <p [class.active]="isActive">This text can be active</p>
+        <p [style.color]="isActive ? 'green' : 'red'">Color changes</p>
+        <p [attr.title]="title">Hover for title</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="syntax-section">
+    <h2>🔧 7. Template Reference Variables (#var)</h2>
+    <p>
+      Template reference variables capture DOM elements, directives, or components for use
+      elsewhere in the template.
+    </p>
+
+    <div class="example">
+      <h3>Example:</h3>
+      <div class="code-example">
+        <pre><code>&lt;input #nameInput type="text" /&gt;
+&lt;button (click)="name = nameInput.value"&gt;Update Name&lt;/button&gt;
+&lt;p&gt;Name: &lbrace;&lbrace; name &rbrace;&rbrace;&lt;/p&gt;</code></pre>
+      </div>
+      <div class="output">
+        <input #nameInput type="text" />
+        <button (click)="name = nameInput.value">Update Name</button>
+        <p>Name: {{ name }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="syntax-section">
+    <h2>🪈 8. Pipes (|)</h2>
+    <p>
+      Pipes transform data for display. They can be chained and accept parameters.
+      Angular provides built-in pipes and you can create custom ones.
+    </p>
+
+    <div class="example">
+      <h3>Example:</h3>
+      <div class="code-example">
+        <pre><code>&lt;p&gt;Amount: &lbrace;&lbrace; amount | currency:'USD':'symbol':'1.2-2' &rbrace;&rbrace;&lt;/p&gt;
+&lt;p&gt;Birthday: &lbrace;&lbrace; birthday | date:'fullDate' &rbrace;&rbrace;&lt;/p&gt;
+&lt;p&gt;Text: &lbrace;&lbrace; text | uppercase | slice:0:5 &rbrace;&rbrace;&lt;/p&gt;
+&lt;p&gt;Items: &lbrace;&lbrace; items | json &rbrace;&rbrace;&lt;/p&gt;</code></pre>
+      </div>
+      <div class="output">
+        <p>Amount: {{ amount | currency:'USD':'symbol':'1.2-2' }}</p>
+        <p>Birthday: {{ birthday | date:'fullDate' }}</p>
+        <p>Text: {{ text | uppercase | slice:0:5 }}</p>
+        <p>Items: {{ items | json }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="syntax-section">
+    <h2>🛡️ 9. Safe Navigation Operator (?.)</h2>
+    <p>
+      The safe navigation operator prevents null reference errors by short-circuiting
+      property access when the object is null or undefined.
+    </p>
+
+    <div class="example">
+      <h3>Example:</h3>
+      <div class="code-example">
+        <pre><code>&lt;p&gt;User name: &lbrace;&lbrace; user?.name &rbrace;&rbrace;&lt;/p&gt;
+&lt;p&gt;User details: &lbrace;&lbrace; user?.details?.address &rbrace;&rbrace;&lt;/p&gt;</code></pre>
+      </div>
+      <div class="output">
+        <p>User name: {{ user?.name }}</p>
+        <p>User details: {{ user?.details?.address }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="syntax-section">
+    <h2>❗ 10. Non-null Assertion Operator (!)</h2>
+    <p>
+      The non-null assertion operator tells TypeScript that a value is not null or undefined,
+      useful when you're certain the value exists.
+    </p>
+
+    <div class="example">
+      <h3>Example:</h3>
+      <div class="code-example">
+        <pre><code>&lt;p&gt;Definite user: &lbrace;&lbrace; user!.name &rbrace;&rbrace;&lt;/p&gt;</code></pre>
+      </div>
+      <div class="output">
+        <p>Definite user: {{ user!.name }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="best-practices">
+    <h2>✨ Best Practices</h2>
+    <ul>
+      <li>Use interpolation for simple text display</li>
+      <li>Prefer property binding over string interpolation for element properties</li>
+      <li>Use two-way binding sparingly, only when necessary</li>
+      <li>Always use trackBy with *ngFor for better performance</li>
+      <li>Use safe navigation operator to prevent null reference errors</li>
+      <li>Keep templates clean by extracting complex logic to component methods</li>
+    </ul>
+  </section>
+</div>

@@ -1,1 +1,118 @@
-/* Custom styles for pure-vs-impure-pipes component */
+/* Container for the whole demo */
+.pure-impure-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header / Title */    
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Section titles */
+.card h2 {
+  color: #34495e;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  border-left: 5px solid #3498db;
+  padding-left: 15px;
+}
+
+/* Card styling */
+.card {
+  border: 2px solid #ddd;
+  padding: 16px 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background-color: #fefefe;
+}
+
+/* Impure card styling */
+.card.impure {
+  border-color: #e67e22;
+  background-color: #fff3e0;
+}
+
+/* Explanation card styling */
+.card.explanation {
+  border-color: #2ecc71;
+  background-color: #e8f5e9;
+}
+
+/* Input styling */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Button styling */
+button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #999;
+  background-color: #f0f0f0;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+/* List styling */
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Paragraph styling inside cards */
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/* Highlights */
+strong {
+  color: #dd0031;
+}
+
+em {
+  font-style: italic;
+  color: #7f8c8d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pure-impure-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}

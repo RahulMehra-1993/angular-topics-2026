@@ -1,59 +1,162 @@
+/* ===============================
+   Dashboard Container
+================================ */
 .dashboard-container {
-  min-height: 100vh;
-  background-attachment: fixed;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: beige;
-}
 
-.heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100dvh;
   width: 100%;
-  gap: 16px;
-  background: linear-gradient(90deg, #343333, #c5a69e);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 2rem;
+  padding: 16px;
+
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    135deg,
+    #f3f4f6 0%,
+    #e5e7eb 40%,
+    #ffffff 100%
+  );
 }
 
+/* ===============================
+   Navbar
+================================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  width: 100%;
+  padding: 12px 20px;
+
+  background: linear-gradient(90deg, #1f1f1f, #3f3f3f);
+  backdrop-filter: blur(8px);
+
+  z-index: 1000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ===============================
+   Heading
+================================ */
 h1 {
-  color: white;
-  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
-  /* margin-bottom: 40px; */
-  font-size: 3rem;
-  font-weight: 400;
-  text-align: center;
+  color: #ffffff;
+  font-size: 2.6rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0;
+  white-space: nowrap;
 }
 
+/* ===============================
+   Search Input
+================================ */
+.search-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 18px;
+
+  border-radius: 999px;
+  border: 2px solid transparent;
+
+  font-size: 15px;
+  background-color: #ffffff;
+  color: #1f2937;
+
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.search-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* ===============================
+   Topics Grid
+================================ */
 .topics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+
   width: 100%;
+  max-width: 1200px;
+
+  margin-top: 8rem;
+  padding-bottom: 2rem;
 }
 
+/* ===============================
+   Topic Card / Link
+================================ */
 .topic-link {
-  display: block;
-  background: rgba(255, 255, 255, 0.9);
-  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 22px;
+  border-radius: 14px;
+
+  background: #ffffff;
+  color: #374151;
   text-decoration: none;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  text-align: center;
+
+  font-size: 1rem;
   font-weight: 500;
+  text-align: center;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.08),
+    0 1px 2px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .topic-link:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background: rgba(255, 255, 255, 1);
+  transform: translateY(-6px);
+  background-color: #f9fafb;
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.18),
+    0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.topic-link:active {
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  .topics-grid {
+    margin-top: 10rem;
+  }
 }

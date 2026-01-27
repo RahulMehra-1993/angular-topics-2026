@@ -1,1 +1,121 @@
-<h1>httpclient</h1>
+<div class="http-page">
+  <!-- HERO -->
+  <header class="hero">
+    <h1>🌐 Angular HttpClient</h1>
+    <p>A complete guide to handling HTTP communication in Angular applications</p>
+  </header>
+
+  <!-- INTRO -->
+  <section class="card">
+    <h2>🔍 What is HttpClient?</h2>
+    <p>
+      HttpClient is a built-in Angular service that allows applications to communicate with backend
+      servers using HTTP protocols. It is mainly used for consuming REST APIs and handling
+      asynchronous data.
+    </p>
+    <p>
+      It is provided by the
+      <code>@angular/common/http</code> package and works using <strong>RxJS Observables</strong>.
+    </p>
+  </section>
+
+  <!-- WHY -->
+  <section class="card">
+    <h2>🎯 Why Do We Use HttpClient?</h2>
+    <ul>
+      <li>Centralized API communication</li>
+      <li>Observable-based asynchronous handling</li>
+      <li>Automatic JSON parsing</li>
+      <li>Easy error handling and retry mechanisms</li>
+      <li>Supports headers, params, and interceptors</li>
+    </ul>
+  </section>
+
+  <!-- FLOW -->
+  <section class="card">
+    <h2>⚙️ How HttpClient Works</h2>
+    <ol>
+      <li>Import <code>HttpClientModule</code> in the application</li>
+      <li>Create a service to handle API logic</li>
+      <li>Inject <code>HttpClient</code> using Dependency Injection</li>
+      <li>Call HTTP methods (GET, POST, PUT, DELETE)</li>
+      <li>Subscribe to the Observable to receive the response</li>
+    </ol>
+  </section>
+
+  <!-- METHODS -->
+  <section class="card">
+    <h2>📡 HTTP Methods</h2>
+    <div class="method-grid">
+      <div class="method">
+        <span>GET</span>
+        <p>Fetch data from the server</p>
+      </div>
+      <div class="method">
+        <span>POST</span>
+        <p>Create new data on the server</p>
+      </div>
+      <div class="method">
+        <span>PUT</span>
+        <p>Update an entire resource</p>
+      </div>
+      <div class="method">
+        <span>PATCH</span>
+        <p>Update partial data</p>
+      </div>
+      <div class="method">
+        <span>DELETE</span>
+        <p>Remove data from the server</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="card">
+    <h2>📌 Real-World Use Cases</h2>
+    <ul>
+      <li>Loading dashboard data</li>
+      <li>Submitting forms</li>
+      <li>User authentication</li>
+      <li>Fetching reports or analytics</li>
+      <li>Background polling or refresh</li>
+    </ul>
+  </section>
+
+  <!-- BEST PRACTICES -->
+  <section class="card">
+    <h2>✅ Best Practices</h2>
+    <ul>
+      <li>Always use services for API calls</li>
+      <li>Handle errors using RxJS operators</li>
+      <li>Use interceptors for auth tokens</li>
+      <li>Avoid API logic inside components</li>
+      <li>Unsubscribe when necessary</li>
+    </ul>
+  </section>
+
+  <!-- SUMMARY -->
+  <!-- SUMMARY / EXAMPLE -->
+  <section class="summary">
+    <h2>
+      Example :
+      <button (click)="getPosts()">Fetch Posts</button>
+    </h2>
+    <div id="photo-container">
+      <!-- LOADING -->
+      <div *ngIf="isLoading" class="loading">Loading photos...</div>
+
+      <!-- DATA -->
+      <ng-container *ngIf="!isLoading && posts.length > 0">
+        <div class="photo-card" *ngFor="let post of posts">
+          <h1>Item - {{ post.id }}</h1>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.body }}</p>
+        </div>
+      </ng-container>
+
+      <!-- NO DATA -->
+      <div *ngIf="!isLoading && posts.length === 0" class="no-data">No Data to fetch</div>
+    </div>
+  </section>
+</div>

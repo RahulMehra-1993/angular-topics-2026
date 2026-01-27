@@ -1,1 +1,72 @@
-<h1>viewencapsulation</h1>
+<div class="pure-impure-container">
+  <h1>Angular View Encapsulation</h1>
+
+  <!-- Section 1: What is View Encapsulation -->
+  <div class="card explanation">
+    <h2>What is View Encapsulation?</h2>
+    <p>
+      In Angular, <strong>View Encapsulation</strong> determines how the styles defined in a component
+      affect the DOM. It controls whether the styles are:
+    </p>
+    <ul>
+      <li>Scoped to the component only</li>
+      <li>Global and affect all elements</li>
+    </ul>
+    <p>
+      It is useful to avoid CSS conflicts when multiple components use similar class names.
+    </p>
+  </div>
+
+  <!-- Section 2: Types of View Encapsulation -->
+  <div class="card">
+    <h2>Types of View Encapsulation</h2>
+    <p>Angular provides three strategies:</p>
+    <ul>
+      <li><strong>Emulated (default):</strong> Styles are scoped using <code>_ngcontent</code> attributes. Safe and most commonly used.</li>
+      <li><strong>None:</strong> Styles are global. Component styles can affect entire app.</li>
+      <li><strong>ShadowDom:</strong> Uses native Shadow DOM encapsulation. Styles are truly scoped to component.</li>
+    </ul>
+  </div>
+
+  <!-- Section 3: Example Usage -->
+  <div class="card impure">
+    <h2>Example: Applying View Encapsulation</h2>
+    <p>
+      In the component TypeScript file, you can define the encapsulation mode:
+    </p>
+    <div class="code-examples">
+      <pre>
+import &#123; Component, ViewEncapsulation &#125; from '@angular/core';
+
+@Component(&#123;
+  selector: 'app-encapsulation-demo',
+  templateUrl: './encapsulation-demo.component.html',
+  styleUrls: ['./encapsulation-demo.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
+&#125;)
+export class EncapsulationDemoComponent &#123; &#125;
+      </pre>
+    </div>
+    <p>
+      Change <code>ViewEncapsulation.Emulated</code> to <code>None</code> or <code>ShadowDom</code> to see different behaviors.
+    </p>
+  </div>
+
+  <!-- Section 4: Demo -->
+<div class="card explanation">
+  <h2>Demo: Scoped Styles</h2>
+  <p>
+    Suppose you have two components with a class <code>.highlight-box</code>. With 
+    <strong>Emulated</strong> or <strong>ShadowDom</strong>, styles in one component 
+    will <em>not</em> affect the other. With <strong>None</strong>, styles become global 
+    and may override styles elsewhere.
+  </p>
+
+  <div class="highlight-box" [class.active]="highlight">
+    This is a highlighted box in this component
+  </div>
+
+  <button (click)="toggleHighlight()">Toggle Highlight</button>
+</div>
+
+</div>

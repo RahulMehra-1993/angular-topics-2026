@@ -1,1 +1,166 @@
-<h1>ivy-compiler</h1>
+<div class="ivy-container">
+  <header class="ivy-header">
+    <h1 class="ivy-title">Angular Ivy Compiler</h1>
+    <p class="ivy-subtitle">The Next-Generation Compilation and Rendering Pipeline</p>
+  </header>
+
+  <section class="ivy-section">
+    <h2 class="section-title">📜 History of Ivy Compiler</h2>
+    <div class="content-card">
+      <p>The Ivy compiler was introduced as part of Angular's rendering engine overhaul. Here's its evolution:</p>
+      <ul class="timeline">
+        <li><strong>Angular 1.x - 8:</strong> Used the View Engine compiler, which generated bloated JavaScript bundles and had limitations in tree-shaking and incremental compilation.</li>
+        <li><strong>Angular 9 (February 2020):</strong> Ivy became the default compiler, replacing View Engine. It was a major milestone in Angular's evolution.</li>
+        <li><strong>Angular 10+:</strong> Ivy continued to mature with performance improvements, better debugging, and enhanced developer experience.</li>
+      </ul>
+      <p>Ivy represents Angular's commitment to modern web development practices, focusing on smaller bundles, faster compilation, and improved runtime performance.</p>
+    </div>
+  </section>
+
+  <section class="ivy-section">
+    <h2 class="section-title">🎯 What is Ivy and Its Use Cases</h2>
+    <div class="content-card">
+      <p><strong>Ivy is Angular's next-generation compilation and rendering pipeline</strong> that compiles components and templates to highly optimized JavaScript code.</p>
+
+      <h3>Key Features:</h3>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <h4>🔧 Tree-Shaking</h4>
+          <p>Removes unused code more effectively, resulting in smaller bundle sizes.</p>
+        </div>
+        <div class="feature-item">
+          <h4>⚡ Faster Compilation</h4>
+          <p>Incremental compilation and better caching for improved build times.</p>
+        </div>
+        <div class="feature-item">
+          <h4>🎨 Improved Debugging</h4>
+          <p>Better error messages and stack traces for easier troubleshooting.</p>
+        </div>
+        <div class="feature-item">
+          <h4>📦 Smaller Bundles</h4>
+          <p>Generates more efficient code that results in smaller production bundles.</p>
+        </div>
+        <div class="feature-item">
+          <h4>🔄 Ahead-of-Time (AOT) by Default</h4>
+          <p>Compiles templates at build time for better performance and security.</p>
+        </div>
+        <div class="feature-item">
+          <h4>🎯 Better Type Checking</h4>
+          <p>Enhanced template type checking catches errors at compile time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ivy-section">
+    <h2 class="section-title">⚙️ How Ivy Works with Angular</h2>
+    <div class="content-card">
+      <p>Ivy automatically works behind the scenes in modern Angular applications. Here's how:</p>
+
+      <h3>Compilation Process:</h3>
+      <ol class="process-steps">
+        <li><strong>Template Analysis:</strong> Ivy analyzes Angular templates and converts them into efficient JavaScript instructions.</li>
+        <li><strong>Component Compilation:</strong> Components are compiled into factory functions that create component instances.</li>
+        <li><strong>Tree Shaking:</strong> Unused code is eliminated during the build process.</li>
+        <li><strong>Runtime Execution:</strong> The compiled code runs efficiently in the browser with minimal overhead.</li>
+      </ol>
+
+      <h3>Automatic Integration:</h3>
+      <p>Since Angular 9, Ivy is enabled by default. The Angular CLI automatically uses Ivy for:</p>
+      <ul>
+        <li>Building production bundles</li>
+        <li>Development server compilation</li>
+        <li>Test compilation</li>
+        <li>AOT compilation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ivy-section">
+    <h2 class="section-title">🔧 Enabling Ivy (If Needed)</h2>
+    <div class="content-card">
+      <div class="alert-info">
+        <strong>Note:</strong> Since Angular 9, Ivy is the default compiler. Manual enabling is only required for older Angular versions or specific configurations.
+      </div>
+
+      <h3>For Angular 8 and Earlier:</h3>
+      <p>In your <code>angular.json</code> file:</p>
+      <pre><code class="language-json">{{"{"}}
+  "projects": {{"{"}}
+    "your-project": {{"{"}}
+      "architect": {{"{"}}
+        "build": {{"{"}}
+          "options": {{"{"}}
+            "aot": true,
+            "buildOptimizer": true
+          {{"}"}}
+        {{"}"}}
+      {{"}"}}
+    {{"}"}}
+  {{"}"}}
+{{"}"}}</code></pre>
+
+      <h3>Enabling Ivy Explicitly:</h3>
+      <p>In <code>tsconfig.json</code>:</p>
+      <pre><code class="language-json">{{"{"}}
+  "compilerOptions": {{"{"}}
+    "enableIvy": true
+  {{"}"}}
+  "angularCompilerOptions": {{"{"}}
+    "enableIvy": true
+  {{"}"}}
+{{"}"}}</code></pre>
+    </div>
+  </section>
+
+  <section class="ivy-section">
+    <h2 class="section-title">📊 Displaying Ivy Information</h2>
+    <div class="content-card">
+      <h3>Checking if Ivy is Enabled:</h3>
+      <p>You can verify Ivy is active by checking the build output or using Angular DevTools.</p>
+
+      <h3>Build Output:</h3>
+      <p>When running <code>ng build</code>, look for Ivy-related messages in the console output.</p>
+
+      <h3>Angular DevTools:</h3>
+      <p>Use Angular DevTools browser extension to inspect component trees and performance metrics.</p>
+
+      <h3>Debug Information:</h3>
+      <p>Enable debug mode to see Ivy's internal workings:</p>
+      <pre><code class="language-typescript">// In your component
+import {{"{"}} isDevMode {{"}"}} from '@angular/core';
+
+if (isDevMode()) {{"{"}}
+  console.log('Ivy Debug Info:', ng.getDebugInfo?.(this));
+{{"}"}}</code></pre>
+    </div>
+  </section>
+
+  <section class="ivy-section">
+    <h2 class="section-title">🚀 Benefits and Performance</h2>
+    <div class="content-card">
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <h4>Bundle Size Reduction</h4>
+          <p>Up to 30% smaller bundles compared to View Engine</p>
+        </div>
+        <div class="benefit-item">
+          <h4>Faster Builds</h4>
+          <p>Incremental compilation speeds up development</p>
+        </div>
+        <div class="benefit-item">
+          <h4>Better Runtime Performance</h4>
+          <p>Optimized change detection and rendering</p>
+        </div>
+        <div class="benefit-item">
+          <h4>Enhanced Developer Experience</h4>
+          <p>Better error messages and debugging tools</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ivy-footer">
+    <p>Angular Ivy represents the future of Angular compilation, providing modern web development capabilities with improved performance and developer experience.</p>
+  </footer>
+</div>
